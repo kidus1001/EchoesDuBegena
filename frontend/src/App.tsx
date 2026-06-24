@@ -1,8 +1,20 @@
+import { Routes, Route } from 'react-router-dom'
+
+import { Footer } from "./components/layout/Footer"
+import { Header } from "./components/layout/Header" 
+import Home from './pages/Home'
+import './index.css'
+
 function App() {
   return (
     <>
-      <p className="text-blue-600">Hello from tailwind CSS Kidus</p>
-      Hello from Kidus!
+      <Header />
+      <main> 
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </main>
+      <Footer />
     </>
   )
 }
