@@ -1,0 +1,1 @@
+Responsible for communication with the backend server.
