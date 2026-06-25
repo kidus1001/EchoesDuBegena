@@ -1,5 +1,8 @@
 import { Button } from "../components/ui/Button";
 import { Card } from "../components/ui/Card";
+
+import { useNavigate } from "react-router-dom";
+
 import Zerfu from "../assets/BegenaPersonImages/Zerfu.png";
 import Aleka from "../assets/BegenaPersonImages/AlekaTessema.jpg";
 import Alemu from "../assets/BegenaAlbumPosters/AlemuAgaAlbum.png"; 
@@ -10,27 +13,31 @@ import Sosena from "../assets/BegenaAlbumPosters/SosnaAlbum.png";
 
 
 export default function Home() {
+  const navigate = useNavigate();
   const features = [
     {
         title: "Recordings",
         description: "Explore rare and historic begena recordings preserved from different generations.",
         buttonText: "Listen to Rare Recordings",
         buttonVariant: "outline",
-        icon: 'recordings'
+        icon: 'recordings',
+        navigate: 'recordings'
     },
     {
         title: "Albums",
         description: "Browse oldies vinyl projects and recordings documenting the legacy of the begena.",
         buttonText: "Browse Albums",
         buttonVariant: "outline",
-        icon: 'albums'
+        icon: 'albums',
+        navigate: 'albums'
     },
     {
         title: "Gallery",
         description: "A collection of photographs, record covers, instruments, and moments from the world of the begena.",
         buttonText: "View Gallery",
         buttonVariant: "outline",
-        icon: 'gallery'
+        icon: 'gallery',
+        navigate: 'gallery'
     },
   ];
 
@@ -58,10 +65,10 @@ export default function Home() {
             A living library of begena albums and projects.
           </p>
           <div className="flex gap-16 pt-4">
-            <Button variant="primary" size="lg">
+            <Button variant="primary" size="lg" onClick={() => navigate('recordings')}>
               Recordings
             </Button>
-            <Button variant="secondary" size="lg">
+            <Button variant="secondary" size="lg" onClick={() => navigate('albums')}>
               Albums
             </Button>
           </div>
@@ -115,6 +122,7 @@ export default function Home() {
                   variant="primary"
                   size="md"
                   className="mt-2"
+                  onClick={() => navigate(feature.navigate)}
                 >
                   {feature.buttonText}
                 </Button>
@@ -185,7 +193,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-8">
-            <Button variant="outline" size="md">
+            <Button variant="outline" size="md" onClick={()=> navigate('albums')}>
               Browse All Albums →
             </Button>
           </div>

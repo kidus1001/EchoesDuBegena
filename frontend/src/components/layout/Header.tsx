@@ -20,7 +20,8 @@ export const Header = () => {
                 {/* Logo */}
                 <Link to="/" className="group">
                     <h1 className="text-1xl md:text-2xl font-serif font-bold tracking-wide">
-                        <div>
+                        <div className="flex gap-4">
+                            <img src="/VinylLogo.png" alt="Vinyl Logo" className="h-6 w-auto mt-1"  />
                             <span className="text-archive-dark">Echoes of the Begena</span>
                         </div>
                     </h1>
