@@ -1,1 +1,0 @@
-Stores static data or mock data used during development.

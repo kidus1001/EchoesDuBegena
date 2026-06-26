@@ -1,0 +1,1 @@
+Contains static resources used in the application.

@@ -1,4 +1,4 @@
-import Nosta from "../../assets/logo/nostalgic.png";
+import Nosta from "/assets/logo/nostalgic.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
