@@ -205,9 +205,9 @@ useEffect(() => {
   };
 
   // Get artist biography (shortened for display)
-  const getShortBio = (biography: string): string => {
-    return biography.length > 50 ? biography.substring(0, 50) + '...' : biography;
-  };
+  // const getShortBio = (biography: string): string => {
+  //   return biography.length > 50 ? biography.substring(0, 50) + '...' : biography;
+  // };
 
   // Get selected artist
   const selectedArtist: Artist | undefined = artists.find(artist => artist.id === selectedArtistId);

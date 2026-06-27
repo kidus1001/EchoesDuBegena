@@ -231,9 +231,9 @@ export const Albums = () => {
             >
               {filteredAlbums.map((album) => {
                 // Find which artist owns this album
-                const artist = artists.find(a => 
-                  a.albums.some(al => al.id === album.id)
-                );
+                // const artist = artists.find(a => 
+                //   a.albums.some(al => al.id === album.id)
+                // );
                 
                 return (
                   <div
