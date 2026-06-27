@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
 // Type definitions
 interface Track {
@@ -58,6 +59,38 @@ const Recordings: React.FC = () => {
   const [duration, setDuration] = useState<number>(0);
   const [expandedAlbums, setExpandedAlbums] = useState<Set<string>>(new Set());
   
+const location = useLocation();
+
+// Add this useEffect to handle both artist and album parameters
+useEffect(() => {
+  const params = new URLSearchParams(location.search);
+  const artistId = params.get('artist');
+  const albumId = params.get('album');
+  
+  if (artistId) {
+    setSelectedArtistId(artistId);
+    
+    // Find the artist
+    const artist = artists.find(a => a.id === artistId);
+    if (artist && artist.albums && artist.albums.length > 0) {
+      // If albumId is provided, expand that specific album
+      if (albumId) {
+        // Check if the album exists in this artist's albums
+        const albumExists = artist.albums.some(album => album.id === albumId);
+        if (albumExists) {
+          setExpandedAlbums(new Set([albumId]));
+        } else {
+          // Fallback: expand the first album
+          setExpandedAlbums(new Set([artist.albums[0].id]));
+        }
+      } else {
+        // No album specified, expand the first album
+        setExpandedAlbums(new Set([artist.albums[0].id]));
+      }
+    }
+  }
+}, [location.search, artists]);
+
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {

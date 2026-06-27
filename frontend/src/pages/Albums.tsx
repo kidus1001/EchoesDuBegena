@@ -1,6 +1,6 @@
 // src/pages/Albums.tsx
 import { useState, useRef, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 // Type definitions matching your JSON structure
 interface Track {
@@ -40,23 +40,28 @@ interface RecordingsData {
 }
 
 export const Albums = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
   const [artists, setArtists] = useState<Artist[]>([]);
   const [allAlbums, setAllAlbums] = useState<Album[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedArtistId, setSelectedArtistId] = useState<string | null>(null);
+  
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const location = useLocation();
 
   // Extract artistId from URL query params
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const artistId = params.get('artist');
-    if (artistId) {
-      setSelectedArtistId(artistId);
+    if (artistId && artists.length > 0) {
+      const artistExists = artists.some(a => a.id === artistId);
+      if (artistExists) {
+        setSelectedArtistId(artistId);
+      }
     }
-  }, [location]);
+  }, [location.search, artists]);
 
   // Fetch artists data
   useEffect(() => {
@@ -78,7 +83,7 @@ export const Albums = () => {
           artist.albums?.forEach(album => {
             allAlbumsData.push({
               ...album,
-              artist: album.artist || artist.name // Use album artist or fallback to artist name
+              artist: album.artist || artist.name
             });
           });
         });
@@ -95,7 +100,8 @@ export const Albums = () => {
     fetchArtists();
   }, []);
 
-  // Filter albums by selected artist
+
+  // Get filtered albums
   const filteredAlbums = selectedArtistId
     ? artists.find(a => a.id === selectedArtistId)?.albums || []
     : allAlbums;
@@ -107,6 +113,23 @@ export const Albums = () => {
     return artist?.name || 'All Artists';
   };
 
+  // Navigate to recordings page with full context
+  const handleViewRecordings = (artistId?: string, albumId?: string) => {
+  const params = new URLSearchParams();
+  
+  if (artistId) {
+    params.set('artist', artistId);
+  }
+  
+  if (albumId) {
+    params.set('album', albumId);
+  }
+  
+  // Add auto-play parameter
+  params.set('autoplay', 'true');
+  
+  navigate(`/recordings?${params.toString()}`);
+};
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
       const scrollAmount = 300;
@@ -206,47 +229,63 @@ export const Albums = () => {
               className="flex gap-6 overflow-x-auto scrollbar-hide pb-6 pt-2 px-2"
               style={{ scrollBehavior: 'smooth' }}
             >
-              {filteredAlbums.map((album) => (
-                <div
-                  key={album.id}
-                  onClick={() => setSelectedAlbum(album)}
-                  className="w-56 flex-shrink-0 group cursor-pointer transition-transform duration-300 hover:-translate-y-2"
-                >
-                  {/* Album Cover */}
-                  <div className="aspect-square bg-gradient-to-br from-archive-brown/10 to-archive-gold/10 rounded-lg overflow-hidden border-2 border-archive-gold/20 group-hover:border-archive-gold/50 transition-all shadow-md group-hover:shadow-xl">
-                    {album.coverImage ? (
-                      <img 
-                        src={album.coverImage} 
-                        alt={album.title} 
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          e.currentTarget.style.display = 'none';
-                          e.currentTarget.parentElement?.querySelector('.fallback-icon')?.classList.remove('hidden');
-                        }}
-                      />
-                    ) : null}
-                    <div className={`w-full h-full flex items-center justify-center ${album.coverImage ? 'hidden' : ''} fallback-icon`}>
-                      <svg className="w-12 h-12 text-archive-gold/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="10" strokeWidth="1.5"/>
-                        <circle cx="12" cy="12" r="3" strokeWidth="1.5"/>
-                      </svg>
+              {filteredAlbums.map((album) => {
+                // Find which artist owns this album
+                const artist = artists.find(a => 
+                  a.albums.some(al => al.id === album.id)
+                );
+                
+                return (
+                  <div
+                    key={album.id}
+                    onClick={() => setSelectedAlbum(album)}
+                    className="w-56 flex-shrink-0 group cursor-pointer transition-transform duration-300 hover:-translate-y-2"
+                  >
+                    {/* Album Cover */}
+                    <div className="aspect-square bg-gradient-to-br from-archive-brown/10 to-archive-gold/10 rounded-lg overflow-hidden border-2 border-archive-gold/20 group-hover:border-archive-gold/50 transition-all shadow-md group-hover:shadow-xl">
+                      {album.coverImage ? (
+                        <img 
+                          src={album.coverImage} 
+                          alt={album.title} 
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                            e.currentTarget.parentElement?.querySelector('.fallback-icon')?.classList.remove('hidden');
+                          }}
+                        />
+                      ) : null}
+                      <div className={`w-full h-full flex items-center justify-center ${album.coverImage ? 'hidden' : ''} fallback-icon`}>
+                        <svg className="w-12 h-12 text-archive-gold/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <circle cx="12" cy="12" r="10" strokeWidth="1.5"/>
+                          <circle cx="12" cy="12" r="3" strokeWidth="1.5"/>
+                        </svg>
+                      </div>
+                    </div>
+                    
+                    {/* Album Info */}
+                    <div className="mt-3 text-center">
+                      <h3 className="font-serif font-semibold text-archive-dark group-hover:text-archive-gold transition-colors text-sm line-clamp-1">
+                        {album.title}
+                      </h3>
+                      <p className="text-xs text-archive-brown/60 line-clamp-1">{album.artist} • {album.year}</p>
+                      <div className="flex items-center justify-center gap-2 mt-1">
+                        <span className="text-xs text-archive-brown/50">
+                          {album.tracks?.length || 0} tracks
+                        </span>
+                        {album.rarity && album.rarity !== 'common' && (
+                          <span className={`inline-block text-xs px-2 py-0.5 rounded-full ${
+                            album.rarity === 'Very Rare' 
+                              ? 'bg-red-200 text-red-800' 
+                              : 'bg-archive-gold/10 text-archive-gold'
+                          }`}>
+                            {album.rarity}
+                          </span>
+                        )}
+                      </div>
                     </div>
                   </div>
-                  
-                  {/* Album Info */}
-                  <div className="mt-3 text-center">
-                    <h3 className="font-serif font-semibold text-archive-dark group-hover:text-archive-gold transition-colors text-sm line-clamp-1">
-                      {album.title}
-                    </h3>
-                    <p className="text-xs text-archive-brown/60 line-clamp-1">{album.artist} • {album.year}</p>
-                    {album.rarity && album.rarity !== 'common' && (
-                      <span className="inline-block mt-1 text-xs px-2 py-0.5 bg-archive-gold/10 text-archive-gold rounded-full">
-                        {album.rarity}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Right Scroll Button */}
@@ -261,14 +300,14 @@ export const Albums = () => {
           </div>
         )}
 
-        {/* Album Detail Modal */}
+        {/* Album Detail Modal - Browse Only */}
         {selectedAlbum && (
           <div 
             className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
             onClick={() => setSelectedAlbum(null)}
           >
             <div 
-              className="bg-archive-paper rounded-xl max-w-2xl w-full max-h-[85vh] overflow-y-auto relative"
+              className="bg-archive-paper rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
@@ -316,6 +355,9 @@ export const Albums = () => {
                       <span className="text-xs px-3 py-1 bg-archive-brown/10 text-archive-dark rounded-full">
                         {selectedAlbum.format || 'Unknown Format'}
                       </span>
+                      <span className="text-xs px-3 py-1 bg-archive-brown/10 text-archive-dark rounded-full">
+                        {selectedAlbum.tracks?.length || 0} tracks
+                      </span>
                       {selectedAlbum.rarity && selectedAlbum.rarity !== 'common' && (
                         <span className={`text-xs px-3 py-1 rounded-full ${
                           selectedAlbum.rarity === 'Very Rare' 
@@ -332,42 +374,111 @@ export const Albums = () => {
                   </div>
                 </div>
 
-                {/* Tracklist */}
+                {/* Two Column Layout - Tracklist & About */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                
+                {/* Left Column - Tracklist Card */}
                 {selectedAlbum.tracks && selectedAlbum.tracks.length > 0 && (
-                  <div className="mb-6">
-                    <h3 className="font-serif text-lg font-semibold text-archive-dark mb-3 border-b border-archive-gold/30 pb-2">
-                      🎵 Tracklist ({selectedAlbum.tracks.length} tracks)
+                    <div className="bg-archive-brown/5 rounded-lg border border-archive-gold/20 p-4">
+                    <h3 className="font-serif text-lg font-semibold text-archive-dark mb-3 border-b border-archive-gold/30 pb-2 flex items-center gap-2">
+                        <span>🎵</span> Tracklist
+                        <span className="text-sm font-normal text-archive-brown/50 ml-auto">
+                        {selectedAlbum.tracks.length} tracks
+                        </span>
                     </h3>
-                    <div className="space-y-2 max-h-48 overflow-y-auto pr-2 custom-scrollbar">
-                      {selectedAlbum.tracks.map((track, index) => (
-                        <div key={track.id} className="flex justify-between items-center p-2 hover:bg-archive-brown/5 rounded-lg transition-colors">
-                          <div className="flex items-center gap-3 min-w-0">
-                            <span className="text-archive-brown/40 text-xs w-6 flex-shrink-0">{index + 1}</span>
-                            <span className="text-archive-dark text-sm truncate">{track.title}</span>
+                    <div className="space-y-1.5 max-h-64 overflow-y-auto pr-2 custom-scrollbar">
+                        {selectedAlbum.tracks.map((track, index) => (
+                        <div 
+                            key={track.id} 
+                            className="flex items-center justify-between p-2 hover:bg-archive-brown/10 rounded-lg transition-colors"
+                        >
+                            <div className="flex items-center gap-3 min-w-0 flex-1">
+                            <span className="text-archive-brown/30 text-xs w-5 flex-shrink-0 font-mono text-right">
+                                {String(index + 1).padStart(2, '0')}
+                            </span>
+                            <span className="text-archive-dark text-sm truncate">
+                                {track.title}
+                            </span>
                             {track.rare && (
-                              <span className="text-xs bg-red-100 text-red-800 px-2 py-0.5 rounded flex-shrink-0">Rare</span>
+                                <span className="text-[10px] bg-red-100 text-red-800 px-1.5 py-0.5 rounded flex-shrink-0 font-medium">
+                                ★ Rare
+                                </span>
                             )}
-                          </div>
-                          <span className="text-archive-brown/40 text-xs flex-shrink-0 ml-2">
+                            </div>
+                            <span className="text-archive-brown/30 text-xs flex-shrink-0 ml-2 font-mono">
                             {track.year || selectedAlbum.year}
-                          </span>
+                            </span>
                         </div>
-                      ))}
+                        ))}
                     </div>
-                  </div>
+                    <p className="text-[10px] text-archive-brown/30 mt-3 text-center border-t border-archive-gold/10 pt-2">
+                        Browse the tracklist • Click "Listen" below to hear these recordings
+                    </p>
+                    </div>
                 )}
 
-                {/* Action Buttons */}
+                {/* Right Column - About Card */}
+                <div className="bg-archive-brown/5 rounded-lg border border-archive-gold/20 p-4">
+                    <h3 className="font-serif text-lg font-semibold text-archive-dark mb-3 border-b border-archive-gold/30 pb-2 flex items-center gap-2">
+                    <span>📖</span> About This Album
+                    </h3>
+                    <div className="space-y-2.5">
+                    <div className="flex justify-between items-center py-1 border-b border-archive-gold/5">
+                        <span className="text-xs font-medium text-archive-brown/60">Artist</span>
+                        <span className="text-sm text-archive-dark">{selectedAlbum.artist}</span>
+                    </div>
+                    <div className="flex justify-between items-center py-1 border-b border-archive-gold/5">
+                        <span className="text-xs font-medium text-archive-brown/60">Year</span>
+                        <span className="text-sm text-archive-dark">{selectedAlbum.year}</span>
+                    </div>
+                    <div className="flex justify-between items-center py-1 border-b border-archive-gold/5">
+                        <span className="text-xs font-medium text-archive-brown/60">Format</span>
+                        <span className="text-sm text-archive-dark">{selectedAlbum.format || 'Unknown'}</span>
+                    </div>
+                    <div className="flex justify-between items-center py-1 border-b border-archive-gold/5">
+                        <span className="text-xs font-medium text-archive-brown/60">Total Tracks</span>
+                        <span className="text-sm text-archive-dark">{selectedAlbum.tracks?.length || 0}</span>
+                    </div>
+                    {selectedAlbum.rarity && selectedAlbum.rarity !== 'common' && (
+                        <div className="flex justify-between items-center py-1">
+                        <span className="text-xs font-medium text-archive-brown/60">Rarity</span>
+                        <span className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${
+                            selectedAlbum.rarity === 'Very Rare' 
+                            ? 'bg-red-200 text-red-800' 
+                            : 'bg-archive-gold/20 text-archive-gold'
+                        }`}>
+                            {selectedAlbum.rarity}
+                        </span>
+                        </div>
+                    )}
+                    {selectedAlbum.description && (
+                        <div className="mt-3 pt-3 border-t border-archive-gold/10">
+                        <p className="text-xs text-archive-brown/60 leading-relaxed italic">
+                            "{selectedAlbum.description}"
+                        </p>
+                        </div>
+                    )}
+                    </div>
+                    <p className="text-[10px] text-archive-brown/30 mt-3 text-center border-t border-archive-gold/10 pt-2">
+                    Reference information • No audio playback
+                    </p>
+                </div>
+                </div>
+
+                {/* Action Buttons - Navigate to Recordings with context */}
                 <div className="flex gap-4 pt-4 border-t border-archive-gold/20">
                   <button 
                     onClick={() => {
-                      // Navigate to recordings page with this album context
-                      // You can implement this based on your routing
+                      // Find which artist owns this album
+                      const artist = artists.find(a => 
+                        a.albums.some(album => album.id === selectedAlbum.id)
+                      );
+                      handleViewRecordings(artist?.id, selectedAlbum.id);
                       setSelectedAlbum(null);
                     }}
                     className="flex-1 bg-archive-dark text-archive-paper px-6 py-3 rounded-lg hover:bg-archive-brown transition-colors"
                   >
-                    🎧 View Recordings
+                    Listen to Album
                   </button>
                 </div>
               </div>

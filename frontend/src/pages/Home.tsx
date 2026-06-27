@@ -1,6 +1,7 @@
 import { Button } from "../components/ui/Button";
 import { Card } from "../components/ui/Card";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import Zerfu from "/assets/BegenaPersonImages/Zerfu.png";
 import Aleka from "/assets/BegenaPersonImages/AlekaTessema.jpg";
@@ -11,6 +12,38 @@ import Alemayehu from "/assets/BegenaAlbumPosters/AlemayehuCassette.jpg";
 import Sosena from "/assets/BegenaAlbumPosters/SosnaAlbum.png";
 
 export default function Home() {
+  // Add these states with your other useState declarations
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const [lightboxTitle, setLightboxTitle] = useState<string>('');
+  const [lightboxArtist, setLightboxArtist] = useState<string>('');
+  const [lightboxYear, setLightboxYear] = useState<string | number>('');
+
+  // Add these handler functions
+  const handleImageClick = (imageUrl: string, title: string, artist: string, year: string | number) => {
+    setLightboxImage(imageUrl);
+    setLightboxTitle(title);
+    setLightboxArtist(artist);
+    setLightboxYear(year);
+  };
+
+  const closeLightbox = () => {
+    setLightboxImage(null);
+    setLightboxTitle('');
+    setLightboxArtist('');
+    setLightboxYear('');
+  };
+
+  // Close lightbox with Escape key
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
+
   const navigate = useNavigate();
   const features = [
     {
@@ -166,13 +199,25 @@ export default function Home() {
                 {albums.map((album) => (
                   <div 
                     key={album.id} 
-                    className="w-32 sm:w-36 md:w-40 flex-shrink-0 group cursor-pointer snap-start"
+                    className="w-32 sm:w-36 md:w-40 flex-shrink-0 group snap-start"
                   >
-                    <div className="aspect-square bg-gradient-to-br from-archive-brown/10 to-archive-gold/10 rounded-sm overflow-hidden border border-archive-gold/20 group-hover:border-archive-gold/50 transition-all shadow-sm group-hover:shadow-md brightness-75 hover:brightness-110">
+                    {/* Album Cover - Click to open lightbox */}
+                    <div 
+                      className="aspect-square bg-gradient-to-br from-archive-brown/10 to-archive-gold/10 rounded-sm overflow-hidden border border-archive-gold/20 group-hover:border-archive-gold/50 transition-all shadow-sm group-hover:shadow-md brightness-75 hover:brightness-110 cursor-pointer"
+                      onClick={() => handleImageClick(
+                        album.imagePlaceholder || album.imagePlaceholder || Zerfu,
+                        album.title,
+                        album.artist,
+                        album.year
+                      )}
+                    >
                       <img 
-                        src={album.imagePlaceholder} 
+                        src={album.imagePlaceholder || album.imagePlaceholder || Zerfu} 
                         alt={album.title}
                         className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
+                        onError={(e) => {
+                          e.currentTarget.src = Zerfu;
+                        }}
                       />
                     </div>
 
@@ -188,6 +233,58 @@ export default function Home() {
                 ))}
               </div>
             </div>
+
+            {/* Image Lightbox Modal - Improved Proportions */}
+            {lightboxImage && (
+              <div 
+                className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 md:p-8 animate-fade-in"
+                onClick={closeLightbox}
+              >
+                <div 
+                  className="relative w-full max-w-3xl max-h-[85vh] md:max-h-[80vh]"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {/* Close Button - Better positioned */}
+                  <button
+                    onClick={closeLightbox}
+                    className="absolute -top-10 right-0 md:-top-12 md:right-0 text-white/60 hover:text-white transition-colors z-10"
+                  >
+                    <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+
+                  {/* Image Container - Better proportions */}
+                  <div className="relative w-full h-full bg-black/40 rounded-lg overflow-hidden">
+                    <img 
+                      src={lightboxImage} 
+                      alt={lightboxTitle}
+                      className="w-full h-full object-contain max-h-[70vh] md:max-h-[75vh]"
+                      onError={(e) => {
+                        e.currentTarget.src = Zerfu;
+                      }}
+                    />
+
+                    {/* Album Info Overlay - Cleaner design */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 md:p-6">
+                      <p className="text-white text-center font-serif text-lg md:text-2xl font-semibold">
+                        {lightboxTitle}
+                      </p>
+                      {lightboxArtist && (
+                        <p className="text-white/60 text-center text-sm md:text-base mt-1">
+                          {lightboxArtist} • {lightboxYear}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Hint - More subtle */}
+                  <p className="text-white/20 text-xs text-center mt-3 md:mt-4">
+                    Click anywhere to close • ESC
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="text-center mt-6 sm:mt-8">
