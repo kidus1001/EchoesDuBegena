@@ -223,16 +223,16 @@ useEffect(() => {
     }
   };
 
-  // Toggle album expansion
+  // Toggle album expansion - only one at a time
   const toggleAlbum = (albumId: string): void => {
     setExpandedAlbums(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(albumId)) {
-        newSet.delete(albumId);
+      // If the clicked album is already expanded, collapse it
+      if (prev.has(albumId)) {
+        return new Set(); // Empty set - collapse all
       } else {
-        newSet.add(albumId);
+        // Otherwise, expand only this album
+        return new Set([albumId]);
       }
-      return newSet;
     });
   };
 

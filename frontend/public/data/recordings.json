@@ -161,7 +161,7 @@
           "rarity": "common",
           "tracks": [
             {
-              "id": "alemu10",
+              "id": "alemu_10",
               "title": "Besmeab",
               "artist": "Alemu Aga",
               "album": "Ende Jerusalem",
@@ -172,7 +172,7 @@
               "rare": false
             },
             {
-              "id": "alemu20",
+              "id": "alemu_20",
               "title": "Wanen",
               "artist": "Alemu Aga",
               "album": "Ende Jerusalem",
@@ -183,7 +183,7 @@
               "rare": false
             },
             {
-              "id": "alemu30",
+              "id": "alemu_30",
               "title": "Yibelahala",
               "artist": "Alemu Aga",
               "album": "Ende Jerusalem",
@@ -194,7 +194,7 @@
               "rare": false
             },
             {
-              "id": "alemu40",
+              "id": "alemu_40",
               "title": "Alayenim Belu",
               "artist": "Alemu Aga",
               "album": "Ende Jerusalem",
@@ -205,7 +205,7 @@
               "rare": false
             },
             {
-              "id": "alemu50",
+              "id": "alemu_50",
               "title": "Girf",
               "artist": "Alemu Aga",
               "album": "Ende Jerusalem",
@@ -216,7 +216,7 @@
               "rare": false
             },
             {
-              "id": "alemu60",
+              "id": "alemu_60",
               "title": "Selamta",
               "artist": "Alemu Aga",
               "album": "Ende Jerusalem",
