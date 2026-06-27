@@ -3,41 +3,272 @@
     {
       "id": "alemu-aga",
       "name": "Alemu Aga",
-      "biography": "Master of the Begena, the Ethiopian harp. Alemu Aga is renowned for his spiritual and meditative performances that blend ancient traditions with contemporary expression.",
+      "biography": "Master of the Begena, the Ethiopian harp. Alemu Aga is renowned for his spiritual and meditative performances.",
       "imageUrl": "/assets/BegenaPersonImages/AlemuAga.jpeg",
       "albums": [
         {
-          "id": "Ethiopiques",
-          "title": "The Harp of David",
+          "id": "alemualbum1",
+          "title": "The Harp of King David",
           "artist": "Alemu Aga",
-          "year": 2002,
+          "year": 1995,
           "description": "A collection of spiritual meditations performed on the traditional Begena harp.",
           "coverImage": "/assets/BegenaAlbumPosters/AlemuAgaAlbum.png",
           "format": "Vinyl",
           "rarity": "common",
           "tracks": [
             {
-              "id": "1",
+              "id": "alemu1",
               "title": "Abatachn",
               "artist": "Alemu Aga",
               "album": "Ethiopiques",
-              "duration": 272,
-              "year": 2002,
+              "year": 1995,
               "description": "A meditative piece inspired by King David's harp.",
-              "audioUrl": "/uploads/audio/AlemuAga/Abatachn.mp3",
+              "audioUrl": "/uploads/audio/AlemuAga/Abatatchen_Hoy.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemuAgaAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "alemu2",
+              "title": "Medinanna Zelesegna",
+              "artist": "Alemu Aga",
+              "album": "Ethiopiques",
+              "year": 1995,
+              "description": "A meditative piece inspired by King David's harp.",
+              "audioUrl": "/uploads/audio/AlemuAga/Medinanna_Zelesegna.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemuAgaAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "alemu3",
+              "title": "Tew Semagn Hagere",
+              "artist": "Alemu Aga",
+              "album": "Ethiopiques",
+              "year": 1995,
+              "description": "A meditative piece inspired by King David's harp.",
+              "audioUrl": "/uploads/audio/AlemuAga/Tew_Semagn_Hagere.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemuAgaAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "alemu4",
+              "title": "Yeemebetatchen Selamta",
+              "artist": "Alemu Aga",
+              "album": "Ethiopiques",
+              "year": 1995,
+              "description": "A meditative piece inspired by King David's harp.",
+              "audioUrl": "/uploads/audio/AlemuAga/Yeemebetatchen_Selamta.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemuAgaAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "alemu5",
+              "title": "Keto Ayqerem Motu",
+              "artist": "Alemu Aga",
+              "album": "Ethiopiques",
+              "year": 1995,
+              "description": "A meditative piece inspired by King David's harp.",
+              "audioUrl": "/uploads/audio/AlemuAga/Keto_Ayqerem_Motu.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemuAgaAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "alemu6",
+              "title": "Sele Sene Seqlet",
+              "artist": "Alemu Aga",
+              "album": "Ethiopiques",
+              "year": 1995,
+              "description": "A meditative piece inspired by King David's harp.",
+              "audioUrl": "/uploads/audio/AlemuAga/Sele_Sene_Seqlet.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemuAgaAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "alemu7",
+              "title": "Abba Gragn Mote",
+              "artist": "Alemu Aga",
+              "album": "Ethiopiques",
+              "year": 1995,
+              "description": "A meditative piece inspired by King David's harp.",
+              "audioUrl": "/uploads/audio/AlemuAga/Abba_Gragn_Mote.mp3",
               "imageUrl": "/images/tracks/harp-of-david.jpg",
               "rare": false
             },
             {
-              "id": "2",
-              "title": "Esme Ante",
+              "id": "alemu8",
+              "title": "Sele Sene Fetret",
               "artist": "Alemu Aga",
               "album": "Ethiopiques",
-              "duration": 272,
-              "year": 2002,
+              "year": 1995,
               "description": "A meditative piece inspired by King David's harp.",
-              "audioUrl": "/uploads/audio/AlemuAga/EsmeAnte.mp3",
-              "imageUrl": "/images/tracks/harp-of-david.jpg",
+              "audioUrl": "/uploads/audio/AlemuAga/Sele_Sene_Fetret.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemuAgaAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "alemu9",
+              "title": "Dagem Metseat",
+              "artist": "Alemu Aga",
+              "album": "Ethiopiques",
+              "year": 1995,
+              "description": "A meditative piece inspired by King David's harp.",
+              "audioUrl": "/uploads/audio/AlemuAga/Dagem_Metseat.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemuAgaAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "alemu10",
+              "title": "Sele Genna",
+              "artist": "Alemu Aga",
+              "album": "Ethiopiques",
+              "year": 1995,
+              "description": "A meditative piece inspired by King David's harp.",
+              "audioUrl": "/uploads/audio/AlemuAga/Sele_Genna.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemuAgaAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "alemu11",
+              "title": "Man Yemeramer",
+              "artist": "Alemu Aga",
+              "album": "Ethiopiques",
+              "year": 1995,
+              "description": "A meditative piece inspired by King David's harp.",
+              "audioUrl": "/uploads/audio/AlemuAga/Man_Yemeramer.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemuAgaAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "alemu12",
+              "title": "Yebeguenna Derdera",
+              "artist": "Alemu Aga",
+              "album": "Ethiopiques",
+              "year": 1995,
+              "description": "A meditative piece inspired by King David's harp.",
+              "audioUrl": "/uploads/audio/AlemuAga/Yebeguenna_Derdera.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemuAgaAlbum.png",
+              "rare": false
+            }
+          ]
+        },
+        {
+          "id": "alemualbum2",
+          "title": "Ende Jerusalem",
+          "artist": "Alemu Aga, Asnakech Worku",
+          "year": 1996,
+          "description": "Traditional Music From Ethiopia.",
+          "coverImage": "/assets/BegenaAlbumPosters/EndeJerusalem.png",
+          "format": "Vinyl",
+          "rarity": "common",
+          "tracks": [
+            {
+              "id": "alemu10",
+              "title": "Besmeab",
+              "artist": "Alemu Aga",
+              "album": "Ende Jerusalem",
+              "year": 1996,
+              "description": "Traditional Music From Ethiopia.",
+              "audioUrl": "/uploads/audio/AlemuAga/EndeJerusalem/Besmeab.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/EndeJerusalem.png",
+              "rare": false
+            },
+            {
+              "id": "alemu20",
+              "title": "Wanen",
+              "artist": "Alemu Aga",
+              "album": "Ende Jerusalem",
+              "year": 1996,
+              "description": "Traditional Music From Ethiopia.",
+              "audioUrl": "/uploads/audio/AlemuAga/EndeJerusalem/Wanen.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/EndeJerusalem.png",
+              "rare": false
+            },
+            {
+              "id": "alemu30",
+              "title": "Yibelahala",
+              "artist": "Alemu Aga",
+              "album": "Ende Jerusalem",
+              "year": 1996,
+              "description": "Traditional Music From Ethiopia.",
+              "audioUrl": "/uploads/audio/AlemuAga/EndeJerusalem/Yibelahala.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/EndeJerusalem.png",
+              "rare": false
+            },
+            {
+              "id": "alemu40",
+              "title": "Alayenim Belu",
+              "artist": "Alemu Aga",
+              "album": "Ende Jerusalem",
+              "year": 1996,
+              "description": "Traditional Music From Ethiopia.",
+              "audioUrl": "/uploads/audio/AlemuAga/EndeJerusalem/Alayenim_Belu.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/EndeJerusalem.png",
+              "rare": false
+            },
+            {
+              "id": "alemu50",
+              "title": "Girf",
+              "artist": "Alemu Aga",
+              "album": "Ende Jerusalem",
+              "year": 1996,
+              "description": "Traditional Music From Ethiopia.",
+              "audioUrl": "/uploads/audio/AlemuAga/EndeJerusalem/Girf.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/EndeJerusalem.png",
+              "rare": false
+            },
+            {
+              "id": "alemu60",
+              "title": "Selamta",
+              "artist": "Alemu Aga",
+              "album": "Ende Jerusalem",
+              "year": 1996,
+              "description": "Traditional Music From Ethiopia.",
+              "audioUrl": "/uploads/audio/AlemuAga/EndeJerusalem/Selamta.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/EndeJerusalem.png",
+              "rare": false
+            }
+          ]
+        },
+        {
+          "id": "alemualbum3",
+          "title": "Elders Of The Begena",
+          "artist": "Alemu Aga, Seyoum Mengistu, Tafese Tesfaye, Admasu Fikre",
+          "year": 2009,
+          "description": "The Harp Of David In Ethiopia",
+          "coverImage": "/assets/BegenaAlbumPosters/Elders.png",
+          "format": "Vinyl",
+          "rarity": "common",
+          "tracks": [
+            {
+              "id": "alemu100",
+              "title": "Alem Marefya Nat",
+              "artist": "Alemu Aga",
+              "album": "Elders Of The Begena",
+              "year": 2009,
+              "description": "The Harp Of David In Ethiopia",
+              "audioUrl": "/uploads/audio/AlemuAga/Elders/Alem.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Elders.png",
+              "rare": false
+            },
+            {
+              "id": "alemu200",
+              "title": "Hosaena",
+              "artist": "Alemu Aga",
+              "album": "Elders Of The Begena",
+              "year": 2009,
+              "description": "The Harp Of David In Ethiopia",
+              "audioUrl": "/uploads/audio/AlemuAga/Elders/Hosaena.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Elders.png",
+              "rare": false
+            },
+            {
+              "id": "alemu300",
+              "title": "Yebeguenna Akalat",
+              "artist": "Alemu Aga",
+              "album": "Elders Of The Begena",
+              "year": 2009,
+              "description": "The Harp Of David In Ethiopia",
+              "audioUrl": "/uploads/audio/AlemuAga/Elders/Yebegena.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Elders.png",
               "rare": false
             }
           ]
@@ -47,41 +278,1580 @@
     {
       "id": "wolde-mariam",
       "name": "Wolde Mariam",
-      "biography": "Begena Player.",
-      "imageUrl": null,
+      "biography": "",
+      "imageUrl": "",
       "albums": [
         {
-          "id": "ancient-echoes",
-          "title": "Ancient Echoes",
-          "artist": "Tesfaye Lemma",
-          "year": 2020,
-          "description": "A fusion of ancient Ethiopian melodies with modern orchestration.",
-          "coverImage": "/images/albums/ancient-echoes.jpg",
-          "format": "digital",
-          "rarity": "common",
+          "id": "woldemariamalbum1",
+          "title": "Abatachen",
+          "artist": "Wolde Mariam",
+          "year": 1939,
+          "description": "Music recorded in the Horn of Africa at the time of the so-called Italian Empire of Africa Orientale Italiana (1936-1941).",
+          "coverImage": "/assets/BegenaAlbumPosters/Teketayun.jpg",
+          "format": "Vinyl",
+          "rarity": "Very Rare",
           "tracks": [
             {
-              "id": "ancient-echoes",
-              "title": "Ancient Echoes",
-              "artist": "Tesfaye Lemma",
-              "album": "Ancient Echoes",
-              "duration": 372,
-              "year": 2020,
-              "description": "An orchestral piece echoing ancient Ethiopian musical traditions.",
+              "id": "woldemariam1",
+              "title": "Abatachen",
+              "artist": "Wolde Mariam",
+              "album": "Abatachen",
+              "year": 1939,
+              "description": "Music recorded in the Horn of Africa at the time of the so-called Italian Empire of Africa Orientale Italiana (1936-1941).",
               "audioUrl": "/uploads/audio/Woldemariam/Abatachn.mp3",
-              "imageUrl": "/images/tracks/ancient-echoes.jpg",
+              "imageUrl": "/assets/BegenaAlbumPosters/Teketayun.jpg",
+              "rare": true
+            },
+            {
+              "id": "woldemariam2",
+              "title": "Teketayun",
+              "artist": "Wolde Mariam",
+              "album": "Abatachen",
+              "year": 1939,
+              "description": "Music recorded in the Horn of Africa at the time of the so-called Italian Empire of Africa Orientale Italiana (1936-1941).",
+              "audioUrl": "/uploads/audio/Woldemariam/Teketayun.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Teketayun.jpg",
+              "rare": true
+            }
+          ]
+        },
+        {
+          "id": "woldemariamalbum2",
+          "title": "Sele Neseha",
+          "artist": "Wolde Mariam",
+          "year": 1939,
+          "description": "",
+          "coverImage": "/assets/BegenaAlbumPosters/Teketayun2.jpg",
+          "format": "Vinyl",
+          "rarity": "Very Rare",
+          "tracks": [
+            {
+              "id": "woldemariam10",
+              "title": "Kidusu Hibist",
+              "artist": "Wolde Mariam",
+              "album": "Sele Neseha",
+              "year": 1939,
+              "description": "",
+              "audioUrl": "/uploads/audio/Woldemariam/KidusuHibst.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Teketayun2.jpg",
+              "rare": true
+            },
+            {
+              "id": "woldemariam20",
+              "title": "Neseha Batgebu",
+              "artist": "Wolde Mariam",
+              "album": "Sele Neseha",
+              "year": 1939,
+              "description": "",
+              "audioUrl": "/uploads/audio/Woldemariam/Neseha.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Teketayun2.jpg",
+              "rare": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lidj-abay",
+      "name": "Lidj Abay",
+      "biography": "",
+      "imageUrl": "",
+      "albums": [
+        {
+          "id": "lidjabayalbum1",
+          "title": "Ghidoun",
+          "artist": "Lidj Abay",
+          "year": 1939,
+          "description": "Music recorded in the Horn of Africa at the time of the so-called Italian Empire of Africa Orientale Italiana (1936-1941).",
+          "coverImage": "/assets/BegenaAlbumPosters/Ghidoun.jpg",
+          "format": "Vinyl",
+          "rarity": "Very Rare",
+          "tracks": [
+            {
+              "id": "lidjabay1",
+              "title": "Ghidoun Ghidoun",
+              "artist": "Lidj Abay",
+              "album": "Ghidoun",
+              "year": 1939,
+              "description": "Music recorded in the Horn of Africa at the time of the so-called Italian Empire of Africa Orientale Italiana (1936-1941).",
+              "audioUrl": "/uploads/audio/LidjAbay/Gidun.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Ghidoun.jpg",
+              "rare": true
+            },
+            {
+              "id": "lidjabay2",
+              "title": "Aikaroum Motou",
+              "artist": "Lidj Abay",
+              "album": "Ghidoun",
+              "year": 1939,
+              "description": "Music recorded in the Horn of Africa at the time of the so-called Italian Empire of Africa Orientale Italiana (1936-1941).",
+              "audioUrl": "/uploads/audio/LidjAbay/AykermMotu.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Ghidoun.jpg",
+              "rare": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ghebresellassie-tesamma",
+      "name": "Ghebresellassie Tesamma",
+      "biography": "",
+      "imageUrl": "",
+      "albums": [
+        {
+          "id": "ghebrealbum1",
+          "title": "Aikaroum Motou",
+          "artist": "Ghebresellassie Tesamma",
+          "year": 1939,
+          "description": "Music recorded in the Horn of Africa at the time of the so-called Italian Empire of Africa Orientale Italiana (1936-1941).",
+          "coverImage": "/assets/BegenaAlbumPosters/AykerimMotu.jpg",
+          "format": "Vinyl",
+          "rarity": "Very Rare",
+          "tracks": [
+            {
+              "id": "ghebre1",
+              "title": "Aikeroum Motou",
+              "artist": "Ghebresellassie Tesamma",
+              "album": "Aikaroum Motou",
+              "year": 1939,
+              "description": "Music recorded in the Horn of Africa at the time of the so-called Italian Empire of Africa Orientale Italiana (1936-1941).",
+              "audioUrl": "/uploads/audio/Gebre/AykermMotu.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AykerimMotu.jpg",
+              "rare": true
+            },
+            {
+              "id": "ghebre2",
+              "title": "Aikeroum Motu - 2",
+              "artist": "Ghebresellassie Tesamma",
+              "album": "Aikaroum Motou",
+              "year": 1939,
+              "description": "Music recorded in the Horn of Africa at the time of the so-called Italian Empire of Africa Orientale Italiana (1936-1941).",
+              "audioUrl": "/uploads/audio/Gebre/Leyu.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AykerimMotu.jpg",
+              "rare": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "demissie",
+      "name": "Demissie Desta",
+      "biography": "Demissie Desta is a revered Ethiopian Orthodox spiritual musician and senior master of the Begena.",
+      "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+      "albums": [
+        {
+          "id": "demissiealbum1",
+          "title": "Lab Le Wold",
+          "artist": "Demissie Desta",
+          "year": 1957,
+          "description": "",
+          "coverImage": "/assets/BegenaAlbumPosters/lablewold.png",
+          "format": "Vinyl",
+          "rarity": "Rare",
+          "tracks": [
+            {
+              "id": "demissie1",
+              "title": "Lab Le Wold",
+              "artist": "Demissie Desta",
+              "album": "Lab Le Wold",
+              "year": 1957,
+              "description": "Music recorded HMV label.",
+              "audioUrl": "/uploads/audio/Demissie/1LabLeWold.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/lablewold.jpg",
+              "rare": false
+            }
+          ]
+        },
+        {
+          "id": "demissiealbum2",
+          "title": "Tsadik Ethiopia",
+          "artist": "Demissie Desta",
+          "year": 1957,
+          "description": "",
+          "coverImage": "/assets/BegenaAlbumPosters/TsadikEthiopia.png",
+          "format": "Vinyl",
+          "rarity": "Rare",
+          "tracks": [
+            {
+              "id": "demissie10",
+              "title": "Tsadik Ethiopia",
+              "artist": "Demissie Desta",
+              "album": "Demissie Desta",
+              "year": 1957,
+              "description": "Music recorded HMV label.",
+              "audioUrl": "/uploads/audio/Demissie/2TsadikEthiopia.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/TsadikEthiopia.png",
+              "rare": false
+            }
+          ]
+        }, 
+        {
+          "id": "demissiealbum3",
+          "title": "Collection - 1",
+          "artist": "Demissie Desta",
+          "year": "Unknown",
+          "description": "",
+          "coverImage": "/assets/BegenaPersonImages/Demissie.jpg",
+          "format": "",
+          "rarity": "Very Rare",
+          "tracks": [
+            {
+              "id": "demissie100",
+              "title": "Untitled",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Collection of 7 audios",
+              "audioUrl": "/uploads/audio/Demissie/Collection.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": true
+            }
+          ]
+        },
+        {
+          "id": "demissiealbum4",
+          "title": "Collection - 2",
+          "artist": "Demissie Desta",
+          "year": "Unknown",
+          "description": "Selamta",
+          "coverImage": "/assets/BegenaAlbumPosters/Demissie.jpg",
+          "format": "",
+          "rarity": "Very Rare",
+          "tracks": [
+            {
+              "id": "demissie1000",
+              "title": "Hode Lemed",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Collection of 6 audios",
+              "audioUrl": "/uploads/audio/Demissie/Collection1/1HodeLmed.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": true
+            },
+            {
+              "id": "demissie2000",
+              "title": "Endih Ale",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Collection of 6 audios",
+              "audioUrl": "/uploads/audio/Demissie/Collection1/2EndihAle.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": true
+            },
+            {
+              "id": "demissie3000",
+              "title": "And Kenm",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Collection of 6 audios",
+              "audioUrl": "/uploads/audio/Demissie/Collection1/3AndKenm.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": true
+            },
+            {
+              "id": "demissie4000",
+              "title": "Endih Argew",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Collection of 6 audios",
+              "audioUrl": "/uploads/audio/Demissie/Collection1/4EndihArgew.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": true
+            },
+            {
+              "id": "demissie5000",
+              "title": "Ersu Fit Fit",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Collection of 6 audios",
+              "audioUrl": "/uploads/audio/Demissie/Collection1/5ErsuFitFit.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": true
+            },
+            {
+              "id": "demissie6000",
+              "title": "Baye Gize",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Collection of 6 audios",
+              "audioUrl": "/uploads/audio/Demissie/Collection1/6BayeGize.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": true
+            }
+          ]
+        },
+        {
+          "id": "demissiealbum5",
+          "title": "Collection - 3",
+          "artist": "Demissie Desta",
+          "year": "Unknown",
+          "description": "",
+          "coverImage": "/assets/BegenaPersonImages/Demissie1.png",
+          "format": "",
+          "rarity": "Common",
+          "tracks": [
+            {
+              "id": "demissie10000",
+              "title": "Weladite Amlak",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Demissie/Collection3/1WeladiteAmlak.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
               "rare": false
             },
             {
-              "id": "spiritual-journey",
-              "title": "Spiritual Journey",
-              "artist": "Tesfaye Lemma",
-              "album": "Ancient Echoes",
-              "duration": 295,
-              "year": 2020,
-              "description": "A vocal piece exploring spiritual themes in Ethiopian culture.",
-              "audioUrl": "/uploads/audio/tesfaye-lemma/spiritual-journey.mp3",
-              "imageUrl": "/images/tracks/spiritual-journey.jpg",
+              "id": "demissie20000",
+              "title": "Tewkut",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Demissie/Collection3/2Tewkut.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": false
+            },
+            {
+              "id": "demissie30000",
+              "title": "Aykerm Motu",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Demissie/Collection3/3AykermMotu.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": false
+            },
+            {
+              "id": "demissie40000",
+              "title": "Degua Tsome Degua",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Demissie/Collection3/4DeguaTsomeDegua.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": false
+            },
+            {
+              "id": "demissie50000",
+              "title": "Melkam Betelehem",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Demissie/Collection3/5Melkambetelhem.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": false
+            },
+            {
+              "id": "demissie60000",
+              "title": "Bezih Gize",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Demissie/Collection3/6BezihGize.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": false
+            },
+            {
+              "id": "demissie70000",
+              "title": "Ere Godana",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Demissie/Collection3/7EreGodana.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": false
+            },
+            {
+              "id": "demissie80000",
+              "title": "Adam Bebedele",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Demissie/Collection3/8AdamBebedele.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": false
+            },
+            {
+              "id": "demissie90000",
+              "title": "Yibelahala",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Demissie/Collection3/9Yibelahala.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": false
+            },
+            {
+              "id": "demissie100000",
+              "title": "Ante Godana",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Demissie/Collection3/10AnteGodana.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": false
+            },
+            {
+              "id": "demissie110000",
+              "title": "Wa'nen",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Demissie/Collection3/11WaEnen.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie.jpg",
+              "rare": false
+            }
+          ]
+        },
+        {
+          "id": "demissiealbum6",
+          "title": "Biography | Performance",
+          "artist": "Demissie Desta",
+          "year": "",
+          "description": "",
+          "coverImage": "/assets/BegenaPersonImages/Demissie2.jpg",
+          "format": "Tape",
+          "rarity": "Very Rare",
+          "tracks": [
+            {
+              "id": "demissie100000",
+              "title": "Biography",
+              "artist": "Demissie Desta",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Demissie/Interview.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Demissie2.jpg",
+              "rare": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aleka",
+      "name": "Aleka Tessema W/Amanuel",
+      "biography": "Father of the Begena",
+      "imageUrl": "",
+      "albums": [
+        {
+          "id": "alekaalbum1",
+          "title": "Untitled",
+          "artist": "Aleka Tessema W/Amanuel",
+          "year": "",
+          "description": "Father of the Begena.",
+          "coverImage": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+          "format": "Cassette",
+          "rarity": "Rare",
+          "tracks": [
+            {
+              "id": "aleka1",
+              "title": "Emebetachen",
+              "artist": "Aleka Tessema W/Amanuel",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Father of the Begena.",
+              "audioUrl": "/uploads/audio/Aleka/1Emebetachen.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+              "rare": false
+            },
+            {
+              "id": "aleka2",
+              "title": "Yedro Zemen",
+              "artist": "Aleka Tessema W/Amanuel",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Father of the Begena.",
+              "audioUrl": "/uploads/audio/Aleka/2YedroZemen.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+              "rare": false
+            },
+            {
+              "id": "aleka3",
+              "title": "Selamta",
+              "artist": "Aleka Tessema W/Amanuel",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Father of the Begena.",
+              "audioUrl": "/uploads/audio/Aleka/3Selamta.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+              "rare": false
+            },
+            {
+              "id": "aleka4",
+              "title": "Keto Aykerm Mot",
+              "artist": "Aleka Tessema W/Amanuel",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Father of the Begena.",
+              "audioUrl": "/uploads/audio/Aleka/4KetoAykermMotu.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+              "rare": false
+            },
+            {
+              "id": "aleka5",
+              "title": "Menu Tehasesu",
+              "artist": "Aleka Tessema W/Amanuel",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Father of the Begena.",
+              "audioUrl": "/uploads/audio/Aleka/5MenuTehasesu.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+              "rare": false
+            },
+            {
+              "id": "aleka6",
+              "title": "Ante Neh",
+              "artist": "Aleka Tessema W/Amanuel",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Father of the Begena.",
+              "audioUrl": "/uploads/audio/Aleka/6AnteNeh.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+              "rare": false
+            },
+            {
+              "id": "aleka7",
+              "title": "Man Yemeramer - 1",
+              "artist": "Aleka Tessema W/Amanuel",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Father of the Begena.",
+              "audioUrl": "/uploads/audio/Aleka/7ManYmeramer1.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+              "rare": false
+            },
+            {
+              "id": "aleka8",
+              "title": "Man Yemeramer - 2",
+              "artist": "Aleka Tessema W/Amanuel",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Father of the Begena.",
+              "audioUrl": "/uploads/audio/Aleka/8ManYmeramer8.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+              "rare": false
+            },
+            {
+              "id": "aleka9",
+              "title": "Man Yemeramer - 3",
+              "artist": "Aleka Tessema W/Amanuel",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Father of the Begena.",
+              "audioUrl": "/uploads/audio/Aleka/9ManYmeramer3.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+              "rare": false
+            },
+            {
+              "id": "aleka10",
+              "title": "Yebelahala",
+              "artist": "Aleka Tessema W/Amanuel",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Father of the Begena.",
+              "audioUrl": "/uploads/audio/Aleka/10Ybelahala.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+              "rare": false
+            },
+            {
+              "id": "aleka11",
+              "title": "Be'ente Fikre Ab",
+              "artist": "Aleka Tessema W/Amanuel",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Father of the Begena.",
+              "audioUrl": "/uploads/audio/Aleka/11BeenteFkrAB.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+              "rare": false
+            },
+            {
+              "id": "aleka12",
+              "title": "Ken Yetale Endehon",
+              "artist": "Aleka Tessema W/Amanuel",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Father of the Begena.",
+              "audioUrl": "/uploads/audio/Aleka/12KenYetaleEndehon.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+              "rare": false
+            },
+            {
+              "id": "aleka13",
+              "title": "Kidus",
+              "artist": "Aleka Tessema W/Amanuel",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Father of the Begena.",
+              "audioUrl": "/uploads/audio/Aleka/12Kidus.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+              "rare": false
+            },
+            {
+              "id": "aleka14",
+              "title": "Kirstos Tense'a Emutan",
+              "artist": "Aleka Tessema W/Amanuel",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Father of the Begena.",
+              "audioUrl": "/uploads/audio/Aleka/KrstosTenseaEmutan.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+              "rare": false
+            },
+            {
+              "id": "aleka15",
+              "title": "Egzio",
+              "artist": "Aleka Tessema W/Amanuel",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Father of the Begena.",
+              "audioUrl": "/uploads/audio/Aleka/15Egzio.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+              "rare": false
+            },
+            {
+              "id": "aleka16",
+              "title": "Yezare Zemen",
+              "artist": "Aleka Tessema W/Amanuel",
+              "album": "Untitled",
+              "year": "Unknown",
+              "description": "Father of the Begena.",
+              "audioUrl": "/uploads/audio/Aleka/16Yezare.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/AlekaTessema.jpg",
+              "rare": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tafese",
+      "name": "Tafese Tesfaye",
+      "biography": "Tafese Tesfaye is an enigmatic Ethiopian Orthodox spiritual musician and master of the begena (the ancient 10-stringed Ethiopian bass lyre)",
+      "imageUrl": "/assets/BegenaPersonImages/Tafesse.png",
+      "albums": [
+        {
+          "id": "tafesealbum1",
+          "title": "Tafese Tesfaye",
+          "artist": "Tafese Tesfaye",
+          "year": 1996,
+          "description": "Released in 1996 by Canery records.",
+          "coverImage": "/assets/BegenaAlbumPosters/Tafesse.png",
+          "format": "CD",
+          "rarity": "Rare",
+          "tracks": [
+            {
+              "id": "tafese1",
+              "title": "Abatachen",
+              "artist": "Tafese Tesfaye",
+              "album": "Tafese Tesfaye",
+              "year": 1996,
+              "description": "Released in 1996 by Canery records.",
+              "audioUrl": "/uploads/audio/tafese/1Abatachen.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Tafesse.png",
+              "rare": false
+            },
+            {
+              "id": "tafese2",
+              "title": "Sele Fetret",
+              "artist": "Tafese Tesfaye",
+              "album": "Tafese Tesfaye",
+              "year": 1996,
+              "description": "Released in 1996 by Canery records.",
+              "audioUrl": "/uploads/audio/tafese/2SeleFitret.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Tafesse.png",
+              "rare": false
+            },
+            {
+              "id": "tafese3",
+              "title": "Sele Ledet",
+              "artist": "Tafese Tesfaye",
+              "album": "Tafese Tesfaye",
+              "year": 1996,
+              "description": "Released in 1996 by Canery records.",
+              "audioUrl": "/uploads/audio/tafese/3SeleLidet.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Tafesse.png",
+              "rare": false
+            },
+            {
+              "id": "tafese4",
+              "title": "Sele Timket",
+              "artist": "Tafese Tesfaye",
+              "album": "Tafese Tesfaye",
+              "year": 1996,
+              "description": "Released in 1996 by Canery records.",
+              "audioUrl": "/uploads/audio/tafese/4SeleTimket.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Tafesse.png",
+              "rare": false
+            },
+            {
+              "id": "tafese5",
+              "title": "Wedaje Wedaje",
+              "artist": "Tafese Tesfaye",
+              "album": "Tafese Tesfaye",
+              "year": 1996,
+              "description": "Released in 1996 by Canery records.",
+              "audioUrl": "/uploads/audio/tafese/5WedajeWedaje.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Tafesse.png",
+              "rare": false
+            },
+            {
+              "id": "tafese6",
+              "title": "Sele Sik'let",
+              "artist": "Tafese Tesfaye",
+              "album": "Tafese Tesfaye",
+              "year": 1996,
+              "description": "Released in 1996 by Canery records.",
+              "audioUrl": "/uploads/audio/tafese/6SeleSiklet.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Tafesse.png",
+              "rare": false
+            },
+            {
+              "id": "tafese7",
+              "title": "Sele Dagem Tensa'e",
+              "artist": "Tafese Tesfaye",
+              "album": "Tafese Tesfaye",
+              "year": 1996,
+              "description": "Released in 1996 by Canery records.",
+              "audioUrl": "/uploads/audio/tafese/7SeleDagmTensae.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Tafesse.png",
+              "rare": false
+            },
+            {
+              "id": "tafese8",
+              "title": "Ergebna Wanen",
+              "artist": "Tafese Tesfaye",
+              "album": "Tafese Tesfaye",
+              "year": 1996,
+              "description": "Released in 1996 by Canery records.",
+              "audioUrl": "/uploads/audio/tafese/8ErgbnaWanen.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Tafesse.png",
+              "rare": false
+            },
+            {
+              "id": "tafese9",
+              "title": "Ayehugn Beh'lme",
+              "artist": "Tafese Tesfaye",
+              "album": "Tafese Tesfaye",
+              "year": 1996,
+              "description": "Released in 1996 by Canery records.",
+              "audioUrl": "/uploads/audio/tafese/9AyehugnBehlme.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Tafesse.png",
+              "rare": false
+            },
+            {
+              "id": "tafese10",
+              "title": "Man Yemeramer",
+              "artist": "Tafese Tesfaye",
+              "album": "Tafese Tesfaye",
+              "year": 1996,
+              "description": "Released in 1996 by Canery records.",
+              "audioUrl": "/uploads/audio/tafese/9ManYmeramer.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Tafesse.png",
+              "rare": false
+            },
+            {
+              "id": "tafese11",
+              "title": "Gebremenfes Kidus",
+              "artist": "Tafese Tesfaye",
+              "album": "Tafese Tesfaye",
+              "year": 1996,
+              "description": "Released in 1996 by Canery records.",
+              "audioUrl": "/uploads/audio/tafese/10GebreMenfeskidus.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Tafesse.png",
+              "rare": false
+            }
+          ]
+        },
+        {
+          "id": "tafesealbum2",
+          "title": "Elders Of The Begena",
+          "artist": "Tafese Tesfaye, Alemu Aga, Seyoum Mengistu, Admasu Fikre",
+          "year": 2009,
+          "description": "The Harp Of David In Ethiopia",
+          "coverImage": "/assets/BegenaAlbumPosters/Elders.png",
+          "format": "Vinyl",
+          "rarity": "common",
+          "tracks": [
+            {
+              "id": "tafese10",
+              "title": "Besemeab",
+              "artist": "Tafese Tesfaye",
+              "album": "Elders Of The Begena",
+              "year": 2009,
+              "description": "The Harp Of David In Ethiopia",
+              "audioUrl": "/uploads/audio/tafese/Elders/Besmeab.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Elders.png",
+              "rare": false
+            },
+            {
+              "id": "tafese20",
+              "title": "Ergibina Wane",
+              "artist": "Tafese Tesfaye",
+              "album": "Elders Of The Begena",
+              "year": 2009,
+              "description": "The Harp Of David In Ethiopia",
+              "audioUrl": "/uploads/audio/tafese/Elders/ErgibinaWane.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Elders.png",
+              "rare": false
+            },
+            {
+              "id": "tafese30",
+              "title": "Wodaje Wodaje",
+              "artist": "Tafese Tesfaye",
+              "album": "Elders Of The Begena",
+              "year": 2009,
+              "description": "The Harp Of David In Ethiopia",
+              "audioUrl": "/uploads/audio/tafese/Elders/WodajeWodaje.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Elders.png",
+              "rare": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zerfu",
+      "name": "Zerfu Demissie",
+      "biography": "Zerfu Demissie is a renowned Ethiopian master of the Begena. He is the son of Demissie Desta.",
+      "imageUrl": "/assets/BegenaPersonImages/Zerfu.png",
+      "albums": [
+        {
+          "id": "akotet",
+          "title": "Akotet",
+          "artist": "Zerfu Demissie",
+          "year": 2008,
+          "description": "Released in 2008 under the Netherlands-based label Terp Records, Akotet is a rare, raw look into the world of traditional Ethiopian court music. The entire album was tracked live on August 12, 2006, inside Zerfu Demissie's bedroom in Addis Ababa, capturing a mesmerizing, deep buzzing drone unique to the begena.",
+          "coverImage": "/assets/BegenaAlbumPosters/ZerfuAlbum.png",
+          "format": "CD",
+          "rarity": "Common",
+          "tracks": [
+            {
+              "id": "zerfu1",
+              "title": "Alayenem, Alsemanem Belu",
+              "artist": "Zerfu Demissie",
+              "album": "Akotet",
+              "year": 2008,
+              "description": "Released in 2008 under the Netherlands-based label Terp Records, Akotet is a rare, raw look into the world of traditional Ethiopian court music. The entire album was tracked live on August 12, 2006, inside Zerfu Demissie's bedroom in Addis Ababa, capturing a mesmerizing, deep buzzing drone unique to the begena.",
+              "audioUrl": "/uploads/audio/zerfu/1AlayenmAlsemanemBelu.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/ZerfuAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "zerfu2",
+              "title": "Degwawen Kitetut",
+              "artist": "Zerfu Demissie",
+              "album": "Akotet",
+              "year": 2008,
+              "description": "Released in 2008 under the Netherlands-based label Terp Records, Akotet is a rare, raw look into the world of traditional Ethiopian court music. The entire album was tracked live on August 12, 2006, inside Zerfu Demissie's bedroom in Addis Ababa, capturing a mesmerizing, deep buzzing drone unique to the begena.",
+              "audioUrl": "/uploads/audio/zerfu/2DegwawenKitetut.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/ZerfuAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "zerfu3",
+              "title": "Arb Yetaredewn",
+              "artist": "Zerfu Demissie",
+              "album": "Akotet",
+              "year": 2008,
+              "description": "Released in 2008 under the Netherlands-based label Terp Records, Akotet is a rare, raw look into the world of traditional Ethiopian court music. The entire album was tracked live on August 12, 2006, inside Zerfu Demissie's bedroom in Addis Ababa, capturing a mesmerizing, deep buzzing drone unique to the begena.",
+              "audioUrl": "/uploads/audio/zerfu/3ArbYetaredewn.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/ZerfuAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "zerfu4",
+              "title": "Ahadu Belo K'idus",
+              "artist": "Zerfu Demissie",
+              "album": "Akotet",
+              "year": 2008,
+              "description": "Released in 2008 under the Netherlands-based label Terp Records, Akotet is a rare, raw look into the world of traditional Ethiopian court music. The entire album was tracked live on August 12, 2006, inside Zerfu Demissie's bedroom in Addis Ababa, capturing a mesmerizing, deep buzzing drone unique to the begena.",
+              "audioUrl": "/uploads/audio/zerfu/4AhaduBeloKidus.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/ZerfuAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "zerfu5",
+              "title": "Arb, Rob, Inegedef",
+              "artist": "Zerfu Demissie",
+              "album": "Akotet",
+              "year": 2008,
+              "description": "Released in 2008 under the Netherlands-based label Terp Records, Akotet is a rare, raw look into the world of traditional Ethiopian court music. The entire album was tracked live on August 12, 2006, inside Zerfu Demissie's bedroom in Addis Ababa, capturing a mesmerizing, deep buzzing drone unique to the begena.",
+              "audioUrl": "/uploads/audio/zerfu/5ArbRobInegedef.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/ZerfuAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "zerfu6",
+              "title": "Ne'i, Ne'i Kidane Mehret",
+              "artist": "Zerfu Demissie",
+              "album": "Akotet",
+              "year": 2008,
+              "description": "Released in 2008 under the Netherlands-based label Terp Records, Akotet is a rare, raw look into the world of traditional Ethiopian court music. The entire album was tracked live on August 12, 2006, inside Zerfu Demissie's bedroom in Addis Ababa, capturing a mesmerizing, deep buzzing drone unique to the begena.",
+              "audioUrl": "/uploads/audio/zerfu/6NeiNeiKidaneMehret.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/ZerfuAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "zerfu7",
+              "title": "Efo Ta'ageseke",
+              "artist": "Zerfu Demissie",
+              "album": "Akotet",
+              "year": 2008,
+              "description": "Released in 2008 under the Netherlands-based label Terp Records, Akotet is a rare, raw look into the world of traditional Ethiopian court music. The entire album was tracked live on August 12, 2006, inside Zerfu Demissie's bedroom in Addis Ababa, capturing a mesmerizing, deep buzzing drone unique to the begena.",
+              "audioUrl": "/uploads/audio/zerfu/7EfoTaageseke.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/ZerfuAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "zerfu8",
+              "title": "Sek'let",
+              "artist": "Zerfu Demissie",
+              "album": "Akotet",
+              "year": 2008,
+              "description": "Released in 2008 under the Netherlands-based label Terp Records, Akotet is a rare, raw look into the world of traditional Ethiopian court music. The entire album was tracked live on August 12, 2006, inside Zerfu Demissie's bedroom in Addis Ababa, capturing a mesmerizing, deep buzzing drone unique to the begena.",
+              "audioUrl": "/uploads/audio/zerfu/8Seklet.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/ZerfuAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "zerfu9",
+              "title": "Dingelim",
+              "artist": "Zerfu Demissie",
+              "album": "Akotet",
+              "year": 2008,
+              "description": "Released in 2008 under the Netherlands-based label Terp Records, Akotet is a rare, raw look into the world of traditional Ethiopian court music. The entire album was tracked live on August 12, 2006, inside Zerfu Demissie's bedroom in Addis Ababa, capturing a mesmerizing, deep buzzing drone unique to the begena.",
+              "audioUrl": "/uploads/audio/zerfu/9Dingelim.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/ZerfuAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "zerfu10",
+              "title": "Esme Ante",
+              "artist": "Zerfu Demissie",
+              "album": "Akotet",
+              "year": 2008,
+              "description": "Released in 2008 under the Netherlands-based label Terp Records, Akotet is a rare, raw look into the world of traditional Ethiopian court music. The entire album was tracked live on August 12, 2006, inside Zerfu Demissie's bedroom in Addis Ababa, capturing a mesmerizing, deep buzzing drone unique to the begena.",
+              "audioUrl": "/uploads/audio/zerfu/10EsmeAnte.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/ZerfuAlbum.png",
+              "rare": false
+            },
+            {
+              "id": "zerfu11",
+              "title": "Godana",
+              "artist": "Zerfu Demissie",
+              "album": "Akotet",
+              "year": 2008,
+              "description": "Released in 2008 under the Netherlands-based label Terp Records, Akotet is a rare, raw look into the world of traditional Ethiopian court music. The entire album was tracked live on August 12, 2006, inside Zerfu Demissie's bedroom in Addis Ababa, capturing a mesmerizing, deep buzzing drone unique to the begena.",
+              "audioUrl": "/uploads/audio/zerfu/11Godana.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/ZerfuAlbum.png",
+              "rare": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alemayehu",
+      "name": "Alemayehu Fanta",
+      "biography": "He was prominent for his mastery of traditional Ethiopian musical instruments, the masinkoand begena. He was also known for his patriotic Ethiopian songs. He taught music at Yared Music School in Addis Ababa for about 40 years, according to sources.",
+      "imageUrl": "/assets/BegenaPersonImages/Alemayehu.jpg",
+      "albums": [
+        {
+          "id": "alemayehualbum1",
+          "title": "Begena Medina Zelesegna",
+          "artist": "Alemayehu Fanta",
+          "year": 1991,
+          "description": "",
+          "coverImage": "/assets/BegenaAlbumPosters/AlemayehuCassette.jpg",
+          "format": "Cassette",
+          "rarity": "common",
+          "tracks": [
+            {
+              "id": "alemayehu1",
+              "title": "Selamta",
+              "artist": "Alemayehu Fanta",
+              "album": "Begena Medina Zelesegna",
+              "year": 1991,
+              "description": "",
+              "audioUrl": "/uploads/audio/Alemayehu/1Selamta.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemayehuCassette.jpg",
+              "rare": false
+            },
+            {
+              "id": "alemayehu2",
+              "title": "Ke'engdih Aldegmem",
+              "artist": "Alemayehu Fanta",
+              "album": "Begena Medina Zelesegna",
+              "year": 1991,
+              "description": "",
+              "audioUrl": "/uploads/audio/Alemayehu/2KeengdihAldegmem.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemayehuCassette.jpg",
+              "rare": false
+            },
+            {
+              "id": "alemayehu3",
+              "title": "E'nat Abatish",
+              "artist": "Alemayehu Fanta",
+              "album": "Begena Medina Zelesegna",
+              "year": 1991,
+              "description": "",
+              "audioUrl": "/uploads/audio/Alemayehu/3EnatAbatsh.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemayehuCassette.jpg",
+              "rare": false
+            },
+            {
+              "id": "alemayehu4",
+              "title": "Besme'ab",
+              "artist": "Alemayehu Fanta",
+              "album": "Begena Medina Zelesegna",
+              "year": 1991,
+              "description": "",
+              "audioUrl": "/uploads/audio/Alemayehu/4BesmeAb.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemayehuCassette.jpg",
+              "rare": false
+            },
+            {
+              "id": "alemayehu5",
+              "title": "Enkuan Ne'akuteke",
+              "artist": "Alemayehu Fanta",
+              "album": "Begena Medina Zelesegna",
+              "year": 1991,
+              "description": "",
+              "audioUrl": "/uploads/audio/Alemayehu/5EnkuanNeakuteke.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemayehuCassette.jpg",
+              "rare": false
+            },
+            {
+              "id": "alemayehu6",
+              "title": "Man Yemeramer",
+              "artist": "Alemayehu Fanta",
+              "album": "Begena Medina Zelesegna",
+              "year": 1991,
+              "description": "",
+              "audioUrl": "/uploads/audio/Alemayehu/6ManYmeramer.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemayehuCassette.jpg",
+              "rare": false
+            },
+            {
+              "id": "alemayehu7",
+              "title": "Keto Aykerm Motu",
+              "artist": "Alemayehu Fanta",
+              "album": "Begena Medina Zelesegna",
+              "year": 1991,
+              "description": "",
+              "audioUrl": "/uploads/audio/Alemayehu/7KetoAykermMotu.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemayehuCassette.jpg",
+              "rare": false
+            },
+            {
+              "id": "alemayehu8",
+              "title": "Yawetahen",
+              "artist": "Alemayehu Fanta",
+              "album": "Begena Medina Zelesegna",
+              "year": 1991,
+              "description": "",
+              "audioUrl": "/uploads/audio/Alemayehu/7Yawetahen.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemayehuCassette.jpg",
+              "rare": false
+            },
+            {
+              "id": "alemayehu9",
+              "title": "Be'enatu New Enji",
+              "artist": "Alemayehu Fanta",
+              "album": "Begena Medina Zelesegna",
+              "year": 1991,
+              "description": "",
+              "audioUrl": "/uploads/audio/Alemayehu/8BenatuNewEnji.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemayehuCassette.jpg",
+              "rare": false
+            },
+            {
+              "id": "alemayehu10",
+              "title": "Kidus",
+              "artist": "Alemayehu Fanta",
+              "album": "Begena Medina Zelesegna",
+              "year": 1991,
+              "description": "",
+              "audioUrl": "/uploads/audio/Alemayehu/9Kidus.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemayehuCassette.jpg",
+              "rare": false
+            },
+            {
+              "id": "alemayehu11",
+              "title": "Kedawit Mezmur",
+              "artist": "Alemayehu Fanta",
+              "album": "Begena Medina Zelesegna",
+              "year": 1991,
+              "description": "",
+              "audioUrl": "/uploads/audio/Alemayehu/10KedawitMezmur.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemayehuCassette.jpg",
+              "rare": false
+            },
+            {
+              "id": "alemayehu12",
+              "title": "Selamta",
+              "artist": "Alemayehu Fanta",
+              "album": "Yisehak Bekur Lidjun",
+              "year": 1991,
+              "description": "",
+              "audioUrl": "/uploads/audio/Alemayehu/11YishakBekurLejun.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/AlemayehuCassette.jpg",
+              "rare": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "workneh",
+      "name": "Aba Werkneh Tesemma",
+      "biography": "Son of Aleka Tesemma W/Amanuel",
+      "imageUrl": "/assets/BegenaPersonImages/AbaWorkneh.jpg",
+      "albums": [
+        {
+          "id": "worknehalbum1",
+          "title": "Collection",
+          "artist": "Aba Werkneh Tesemma",
+          "year": "Unknown",
+          "description": "",
+          "coverImage": "/assets/BegenaPersonImages/AbaWorkneh.jpg",
+          "format": "",
+          "rarity": "Common",
+          "tracks": [
+            {
+              "id": "workneh1",
+              "title": "Semun Siterut",
+              "artist": "Aba Werkneh Tesemma",
+              "album": "Collection",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Werkneh/1SemunSiterut.mp3",
+              "imageUrl":"/assets/BegenaPersonImages/AbaWorkneh.jpg",
+              "rare": false
+            },
+            {
+              "id": "workneh2",
+              "title": "Man Yemeramer",
+              "artist": "Aba Werkneh Tesemma",
+              "album": "Collection",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Werkneh/2ManYemeramer.mp3",
+              "imageUrl":"/assets/BegenaPersonImages/AbaWorkneh.jpg",
+              "rare": false
+            },
+            {
+              "id": "workneh3",
+              "title": "Sene Fetret",
+              "artist": "Aba Werkneh Tesemma",
+              "album": "Collection",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Werkneh/3SineFetret.mp3",
+              "imageUrl":"/assets/BegenaPersonImages/AbaWorkneh.jpg",
+              "rare": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sosena",
+      "name": "Sosena Gebre Eyesus",
+      "biography": "Ethiopian artist Sosena Gebre Eyesus sings accompanied by her playing of the Begena, or King David's Harp, one of the world’s oldest and most beguiling instruments.",
+      "imageUrl": "/assets/BegenaAlbumPosters/SosnaAlbum.png",
+      "albums": [
+        {
+          "id": "sosenaalbum1",
+          "title": "Sosena Gebre Eyesus",
+          "artist": "Sosena Gebre Eyesus",
+          "year": "2018",
+          "description": "Ethiopian artist Sosena Gebre Eyesus sings accompanied by her playing of the Begena, or King David's Harp, one of the world’s oldest and most beguiling instruments.",
+          "coverImage": "/assets/BegenaAlbumPosters/SosnaAlbum.png",
+          "format": "Vinyl",
+          "rarity": "Common",
+          "tracks": [
+            {
+              "id": "sosena1",
+              "title": "Aser Awetar",
+              "artist": "Sosena Gebre Eyesus",
+              "album": "Sosena Gebre Eyesus",
+              "year": "2018",
+              "description": "Ethiopian artist Sosena Gebre Eyesus sings accompanied by her playing of the Begena, or King David's Harp, one of the world’s oldest and most beguiling instruments.",
+              "audioUrl": "/uploads/audio/Sosena/1AsrAwtar.mp3",
+              "imageUrl":"/assets/BegenaPersonImages/Sosena.png",
+              "rare": false
+            },
+            {
+              "id": "sosena2",
+              "title": "Denegil Selesh",
+              "artist": "Sosena Gebre Eyesus",
+              "album": "Sosena Gebre Eyesus",
+              "year": "2018",
+              "description": "Ethiopian artist Sosena Gebre Eyesus sings accompanied by her playing of the Begena, or King David's Harp, one of the world’s oldest and most beguiling instruments.",
+              "audioUrl": "/uploads/audio/Sosena/2DenegilSelesh.mp3",
+              "imageUrl":"/assets/BegenaPersonImages/Sosena.png",
+              "rare": false
+            },
+            {
+              "id": "sosena3",
+              "title": "Bayenewem Gize",
+              "artist": "Sosena Gebre Eyesus",
+              "album": "Sosena Gebre Eyesus",
+              "year": "2018",
+              "description": "Ethiopian artist Sosena Gebre Eyesus sings accompanied by her playing of the Begena, or King David's Harp, one of the world’s oldest and most beguiling instruments.",
+              "audioUrl": "/uploads/audio/Sosena/3BayenewemGize.mp3",
+              "imageUrl":"/assets/BegenaPersonImages/Sosena.png",
+              "rare": false
+            },
+            {
+              "id": "sosena4",
+              "title": "Dengel Banchi Aferie",
+              "artist": "Sosena Gebre Eyesus",
+              "album": "Sosena Gebre Eyesus",
+              "year": "2018",
+              "description": "Ethiopian artist Sosena Gebre Eyesus sings accompanied by her playing of the Begena, or King David's Harp, one of the world’s oldest and most beguiling instruments.",
+              "audioUrl": "/uploads/audio/Sosena/4DengilBanchiAferie.mp3",
+              "imageUrl":"/assets/BegenaPersonImages/Sosena.png",
+              "rare": false
+            },
+            {
+              "id": "sosena5",
+              "title": "Seqelew Eyalu",
+              "artist": "Sosena Gebre Eyesus",
+              "album": "Sosena Gebre Eyesus",
+              "year": "2018",
+              "description": "Ethiopian artist Sosena Gebre Eyesus sings accompanied by her playing of the Begena, or King David's Harp, one of the world’s oldest and most beguiling instruments.",
+              "audioUrl": "/uploads/audio/Sosena/5SeqelewEyalu.mp3",
+              "imageUrl":"/assets/BegenaPersonImages/Sosena.png",
+              "rare": false
+            },
+            {
+              "id": "sosena6",
+              "title": "Andu Selehulu",
+              "artist": "Sosena Gebre Eyesus",
+              "album": "Sosena Gebre Eyesus",
+              "year": "2018",
+              "description": "Ethiopian artist Sosena Gebre Eyesus sings accompanied by her playing of the Begena, or King David's Harp, one of the world’s oldest and most beguiling instruments.",
+              "audioUrl": "/uploads/audio/Sosena/6AnduSelehulu.mp3",
+              "imageUrl":"/assets/BegenaPersonImages/Sosena.png",
+              "rare": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seyoum-mengistu",
+      "name": "Seyoum Mengistu",
+      "biography": "",
+      "imageUrl": "/assets/BegenaPersonImages/Seyoum.jpg",
+      "albums": [
+        {
+          "id": "seyoumalbum1",
+          "title": "Elders Of The Begena",
+          "artist": "Seyoum Mengistu, Tafese Tesfaye, Alemu Aga, Admasu Fikre",
+          "year": 2009,
+          "description": "The Harp Of David In Ethiopia",
+          "coverImage": "/assets/BegenaAlbumPosters/Elders.png",
+          "format": "Vinyl",
+          "rarity": "common",
+          "tracks": [
+            {
+              "id": "seyoum1",
+              "title": "Hede Meneno",
+              "artist": "Seyoum Mengistu",
+              "album": "Elders Of The Begena",
+              "year": 2009,
+              "description": "The Harp Of David In Ethiopia",
+              "audioUrl": "/uploads/audio/Seyoum/1HedeMeneno.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Elders.png",
+              "rare": false
+            },
+            {
+              "id": "seyoum2",
+              "title": "Segid Selam",
+              "artist": "Seyoum Mengistu",
+              "album": "Elders Of The Begena",
+              "year": 2009,
+              "description": "The Harp Of David In Ethiopia",
+              "audioUrl": "/uploads/audio/Seyoum/2SegidSelam.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Elders.png",
+              "rare": false
+            },
+            {
+              "id": "seyoum3",
+              "title": "Ghidoun",
+              "artist": "Seyoum Mengistu",
+              "album": "Elders Of The Begena",
+              "year": 2009,
+              "description": "The Harp Of David In Ethiopia",
+              "audioUrl": "/uploads/audio/Seyoum/3Ghidoun.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Elders.png",
+              "rare": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "admassu-fikre",
+      "name": "Admassu Fikre",
+      "biography": "",
+      "imageUrl": "/assets/BegenaPersonImages/Seyoum.jpg",
+      "albums": [
+        {
+          "id": "admassualbum1",
+          "title": "Elders Of The Begena",
+          "artist": "Admasu Fikre, Seyoum Mengistu, Tafese Tesfaye, Alemu Aga",
+          "year": 2009,
+          "description": "The Harp Of David In Ethiopia",
+          "coverImage": "/assets/BegenaAlbumPosters/Elders.png",
+          "format": "Vinyl",
+          "rarity": "common",
+          "tracks": [
+            {
+              "id": "admassu1",
+              "title": "Ehud Lelit",
+              "artist": "Admassu Fikre",
+              "album": "Elders Of The Begena",
+              "year": 2009,
+              "description": "The Harp Of David In Ethiopia",
+              "audioUrl": "/uploads/audio/Admasu/1EhudLelit.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Elders.png",
+              "rare": false
+            },
+            {
+              "id": "admassu2",
+              "title": "Kidus Kidus",
+              "artist": "Admassu Fikre",
+              "album": "Elders Of The Begena",
+              "year": 2009,
+              "description": "The Harp Of David In Ethiopia",
+              "audioUrl": "/uploads/audio/Admasu/2Kidus.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Elders.png",
+              "rare": false
+            },
+            {
+              "id": "admassu3",
+              "title": "Medina Ena Zelesegna",
+              "artist": "Admassu Fikre",
+              "album": "Elders Of The Begena",
+              "year": 2009,
+              "description": "The Harp Of David In Ethiopia",
+              "audioUrl": "/uploads/audio/Admasu/3MedinaEnaZelesegna.mp3",
+              "imageUrl": "/assets/BegenaAlbumPosters/Elders.png",
+              "rare": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fikru-sahlu",
+      "name": "Fikru Sahilu",
+      "biography": "",
+      "imageUrl": "/assets/BegenaPersonImages/FikruSahlu.jpg",
+      "albums": [
+        {
+          "id": "fikrualbum1",
+          "title": "Collection",
+          "artist": "Merigeta Fikru Sahilu",
+          "year": "Unknown",
+          "description": "",
+          "coverImage": "/assets/BegenaPersonImages/FikruSahlu.jpg",
+          "format": "",
+          "rarity": "common",
+          "tracks": [
+            {
+              "id": "fikru1",
+              "title": "Kidus",
+              "artist": "Merigeta Fikru Sahilu",
+              "album": "Collection",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/FikruSahlu/1Kidus.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/FikruSahlu.jpg",
+              "rare": false
+            },
+            {
+              "id": "fikru2",
+              "title": "Sibhat Leke",
+              "artist": "Merigeta Fikru Sahilu",
+              "album": "Collection",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/FikruSahlu/2SebhatLeke.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/FikruSahlu.jpg",
+              "rare": false
+            },
+            {
+              "id": "fikru3",
+              "title": "Yordanosen Alfo",
+              "artist": "Merigeta Fikru Sahilu",
+              "album": "Collection",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/FikruSahlu/3YordanosenAlfo.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/FikruSahlu.jpg",
+              "rare": false
+            },
+            {
+              "id": "fikru4",
+              "title": "Esegid Leke",
+              "artist": "Merigeta Fikru Sahilu",
+              "album": "Collection",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/FikruSahlu/4EsegedLeke.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/FikruSahlu.jpg",
+              "rare": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "belete-mengesha",
+      "name": "Belete Mengesha",
+      "biography": "",
+      "imageUrl": "/assets/BegenaPersonImages/Belete.jpg",
+      "albums": [
+        {
+          "id": "beletealbum1",
+          "title": "Collection",
+          "artist": "Debtera Belete Mengesha",
+          "year": 1971,
+          "description": "",
+          "coverImage": "/assets/BegenaPersonImages/Belete.jpg",
+          "format": "",
+          "rarity": "common",
+          "tracks": [
+            {
+              "id": "belete1",
+              "title": "Ye'emebetachen Selamta",
+              "artist": "Debtera Belete Mengesha",
+              "album": "Collection",
+              "year": 1971,
+              "description": "",
+              "audioUrl": "/uploads/audio/DebteraBelete/1YemebetachenSelamta.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Belete.jpg",
+              "rare": false
+            },
+            {
+              "id": "belete2",
+              "title": "Aykerm Motu",
+              "artist": "Debtera Belete Mengesha",
+              "album": "Collection",
+              "year": 1971,
+              "description": "",
+              "audioUrl": "/uploads/audio/DebteraBelete/2AykermMotu.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Belete.jpg",
+              "rare": false
+            },
+            {
+              "id": "belete3",
+              "title": "Yibelahala",
+              "artist": "Debtera Belete Mengesha",
+              "album": "Collection",
+              "year": 1971,
+              "description": "",
+              "audioUrl": "/uploads/audio/DebteraBelete/3Yibelahala.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Belete.jpg",
+              "rare": false
+            },
+            {
+              "id": "belete4",
+              "title": "Keto Aykerm Motu",
+              "artist": "Debtera Belete Mengesha",
+              "album": "Collection",
+              "year": 1971,
+              "description": "",
+              "audioUrl": "/uploads/audio/DebteraBelete/4KetoAykermMotu.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Belete.jpg",
+              "rare": false
+            },
+            {
+              "id": "belete5",
+              "title": "Lemela'ekt Mesgana",
+              "artist": "Debtera Belete Mengesha",
+              "album": "Collection",
+              "year": 1971,
+              "description": "",
+              "audioUrl": "/uploads/audio/DebteraBelete/5LemelaektMsgana.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Belete.jpg",
+              "rare": true
+            },
+            {
+              "id": "belete6",
+              "title": "Ye'emebetachen Mesgana",
+              "artist": "Debtera Belete Mengesha",
+              "album": "Collection",
+              "year": 1971,
+              "description": "",
+              "audioUrl": "/uploads/audio/DebteraBelete/6YemebetachenMsgana.mp3",
+              "imageUrl": "/assets/BegenaPersonImages/Belete.jpg",
+              "rare": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abiy",
+      "name": "Abiy Seyoum",
+      "biography": "",
+      "imageUrl": "",
+      "albums": [
+        {
+          "id": "abiyalbum1",
+          "title": "Collection",
+          "artist": "Abiy Seyoum",
+          "year": "Unknown",
+          "description": "",
+          "coverImage": "",
+          "format": "",
+          "rarity": "common",
+          "tracks": [
+            {
+              "id": "abiy1",
+              "title": "Nastemase'leki",
+              "artist": "Abiy Seyoum",
+              "album": "Collection",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Abiy/1Nastemasleki.mp3",
+              "imageUrl": "",
+              "rare": false
+            },
+            {
+              "id": "abiy2",
+              "title": "Degua Tsome Degua",
+              "artist": "Abiy Seyoum",
+              "album": "Collection",
+              "year": "Unknown",
+              "description": "",
+              "audioUrl": "/uploads/audio/Abiy/2DeguaTsomeDegua.mp3",
+              "imageUrl": "",
               "rare": false
             }
           ]

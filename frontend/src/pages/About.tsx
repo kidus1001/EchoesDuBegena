@@ -58,7 +58,7 @@ export const About = () => {
               <p>
                 I'm <span className="text-archive-gold font-medium">Kidus Yosef</span>, a software engineer 
                 and a begena player. What started as simple curiosity turned into a quiet obsession, gathering 
-                every recording I could find and putting them all in one place.
+                every "old" recordings and begena projects I could find and putting them all in one place.
               </p>
               <p>
                 The begena, often called the "Harp of King David," has been a source of 
@@ -66,7 +66,7 @@ export const About = () => {
                 of these historic recordings were scattered.
               </p>
               <p>
-                That's why I created the <span className="text-archive-gold font-medium">Begena Archive</span>.
+                That's why I created the <span className="text-archive-gold font-medium">Echoes of the Begena</span>.
                 A digital sanctuary where these timeless melodies are preserved, celebrated, 
                 and made accessible to everyone who seeks their peaceful embrace.
               </p>
@@ -102,8 +102,8 @@ export const About = () => {
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-12 mb-14">
           {[
-            { number: "50+", label: "Rare Recordings", icon: "🎵" },
-            { number: "20+", label: "Master Artists", icon: "👤" },
+            { number: "120+", label: "Rare Recordings", icon: "🎵" },
+            { number: "15+", label: "Master Artists", icon: "👤" },
             { number: "1930s", label: "Earliest Recording", icon: "📅" },
           ].map((stat, idx) => (
             <div key={idx} className="text-center group">
