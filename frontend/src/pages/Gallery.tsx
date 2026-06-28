@@ -31,6 +31,12 @@ import img27 from '/assets/gallery/27.jpg';
 import img28 from '/assets/gallery/28.jpg';
 import img30 from '/assets/gallery/30.jpg';
 import img31 from '/assets/gallery/31.jpg';
+import img32 from '/assets/BegenaPersonImages/AbaWorkneh.jpg';
+import img33 from '/assets/BegenaPersonImages/AlekaTessema.jpg';
+import img34 from '/assets/BegenaPersonImages/AlemuAga.jpeg';
+import img35 from '/assets/BegenaPersonImages/Demissie2.jpg';
+import img36 from '/assets/BegenaPersonImages/Demissie1.png';
+import img37 from '/assets/BegenaPersonImages/Zerfu.png';
 
 interface GalleryImage {
   id: string;
@@ -67,7 +73,7 @@ const Gallery: React.FC = () => {
       img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
       img11, img12, img13, img14, img15, img16, img17, img19, img20,
       img21, img22, img23, img24, img25, img26, img27, img28, img30,
-      img31
+      img31, img32, img33, img34, img35, img36, img37
     ];
 
     const loadImages = async () => {
