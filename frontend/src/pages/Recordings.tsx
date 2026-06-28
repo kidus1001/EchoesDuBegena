@@ -173,7 +173,6 @@ useEffect(() => {
     if (selectedTrack && audioRef.current) {
       const audio = audioRef.current;
       audio.src = selectedTrack.audioUrl;
-      audio.load();
       
       if (isPlaying) {
         audio.play().catch(error => {
