@@ -59,37 +59,56 @@ const Recordings: React.FC = () => {
   const [duration, setDuration] = useState<number>(0);
   const [expandedAlbums, setExpandedAlbums] = useState<Set<string>>(new Set());
   
-const location = useLocation();
+  const location = useLocation();
+  const mainContentRef = useRef<HTMLDivElement | null>(null);
+  const artistListRef = useRef<HTMLDivElement | null>(null);
 
-// Add this useEffect to handle both artist and album parameters
-useEffect(() => {
-  const params = new URLSearchParams(location.search);
-  const artistId = params.get('artist');
-  const albumId = params.get('album');
-  
-  if (artistId) {
-    setSelectedArtistId(artistId);
+  // Handle URL params
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const artistId = params.get('artist');
+    const albumId = params.get('album');
     
-    // Find the artist
-    const artist = artists.find(a => a.id === artistId);
-    if (artist && artist.albums && artist.albums.length > 0) {
-      // If albumId is provided, expand that specific album
-      if (albumId) {
-        // Check if the album exists in this artist's albums
-        const albumExists = artist.albums.some(album => album.id === albumId);
-        if (albumExists) {
-          setExpandedAlbums(new Set([albumId]));
+    if (artistId) {
+      setSelectedArtistId(artistId);
+      
+      const artist = artists.find(a => a.id === artistId);
+      if (artist && artist.albums && artist.albums.length > 0) {
+        if (albumId) {
+          const albumExists = artist.albums.some(album => album.id === albumId);
+          if (albumExists) {
+            setExpandedAlbums(new Set([albumId]));
+          } else {
+            setExpandedAlbums(new Set([artist.albums[0].id]));
+          }
         } else {
-          // Fallback: expand the first album
           setExpandedAlbums(new Set([artist.albums[0].id]));
         }
-      } else {
-        // No album specified, expand the first album
-        setExpandedAlbums(new Set([artist.albums[0].id]));
       }
     }
-  }
-}, [location.search, artists]);
+  }, [location.search, artists]);
+
+  // Scroll to main content on mobile when artist is selected
+  useEffect(() => {
+    if (selectedArtistId && mainContentRef.current) {
+      // Check if on mobile (screen width < 1024px)
+      const isMobile = window.innerWidth < 1024;
+      
+      if (isMobile) {
+        // Small delay to ensure content is rendered
+        setTimeout(() => {
+          const headerOffset = 80; // Adjust based on your header height
+          const elementPosition = mainContentRef.current?.getBoundingClientRect().top || 0;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }, 300);
+      }
+    }
+  }, [selectedArtistId]);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -107,7 +126,6 @@ useEffect(() => {
         setArtists(data.artists || []);
         setError(null);
         
-        // Auto-expand first album when artist loads
         if (data.artists && data.artists.length > 0) {
           const firstArtist = data.artists[0];
           if (firstArtist.albums && firstArtist.albums.length > 0) {
@@ -129,7 +147,6 @@ useEffect(() => {
   // Audio event listeners
   useEffect(() => {
     const audio = audioRef.current;
-    
     if (!audio) return;
 
     const handleTimeUpdate = () => {
@@ -173,13 +190,11 @@ useEffect(() => {
     const audio = audioRef.current;
     if (!audio || !selectedTrack) return;
 
-    // Reset and load new track
     audio.pause();
     audio.currentTime = 0;
     audio.src = selectedTrack.audioUrl;
     audio.load();
 
-    // Auto-play if should be playing
     if (isPlaying) {
       const playPromise = audio.play();
       if (playPromise !== undefined) {
@@ -214,23 +229,16 @@ useEffect(() => {
     return artist.albums.reduce((total, album) => total + album.tracks.length, 0);
   };
 
-  // Get artist biography (shortened for display)
-  // const getShortBio = (biography: string): string => {
-  //   return biography.length > 50 ? biography.substring(0, 50) + '...' : biography;
-  // };
-
   // Get selected artist
   const selectedArtist: Artist | undefined = artists.find(artist => artist.id === selectedArtistId);
 
-  // Handle track selection - FIXED
+  // Handle track selection
   const handleTrackClick = (track: TrackWithAlbum): void => {
-    // If same track, just toggle play/pause
     if (selectedTrack?.id === track.id) {
       setIsPlaying(!isPlaying);
       return;
     }
 
-    // Stop current audio completely
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
@@ -238,15 +246,11 @@ useEffect(() => {
       audioRef.current.load();
     }
 
-    // Reset states
     setCurrentTime(0);
     setDuration(0);
     setIsPlaying(false);
-    
-    // Set new track
     setSelectedTrack(track);
     
-    // Start playing after state updates
     setTimeout(() => {
       setIsPlaying(true);
     }, 100);
@@ -255,11 +259,9 @@ useEffect(() => {
   // Toggle album expansion - only one at a time
   const toggleAlbum = (albumId: string): void => {
     setExpandedAlbums(prev => {
-      // If the clicked album is already expanded, collapse it
       if (prev.has(albumId)) {
-        return new Set(); // Empty set - collapse all
+        return new Set();
       } else {
-        // Otherwise, expand only this album
         return new Set([albumId]);
       }
     });
@@ -326,14 +328,18 @@ useEffect(() => {
       <audio ref={audioRef} />
       
       <div className="bg-archive-paper flex flex-col lg:flex-row min-h-screen">
-        <aside className="bg-archive-grey/5 lg:w-72 flex-shrink-0 min-h-screen lg:h-full border-r border-archive-gold/20"> 
-          <div className="sticky top-0 pt-8 pb-8 px-6">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="font-serif text-xl font-semibold text-archive-dark">Featured Artists</h2>
-              <span className="text-archive-brown/50 text-sm">{artists.length} artists</span>
+        {/* Sidebar - Artist List */}
+        <aside className="bg-archive-grey/5 lg:w-72 flex-shrink-0 lg:min-h-screen lg:h-full border-r border-archive-gold/20"> 
+          <div className="sticky top-0 pt-4 sm:pt-8 pb-4 px-4 sm:px-6">
+            <div className="flex justify-between items-center mb-3">
+              <h2 className="font-serif text-lg sm:text-xl font-semibold text-archive-dark">Featured Artists</h2>
+              <span className="text-archive-brown/50 text-xs sm:text-sm">{artists.length} artists</span>
             </div>
 
-            <div className="space-y-2 max-h-[calc(100vh-150px)] overflow-y-auto p-2 border border-archive-gold/30 rounded-lg">
+            <div 
+              ref={artistListRef}
+              className="space-y-2 max-h-[calc(100vh-150px)] overflow-y-auto p-2 border border-archive-gold/30 rounded-lg"
+            >
               {artists.length === 0 ? (
                 <div className="text-center text-archive-brown py-4">No artists found</div>
               ) : (
@@ -368,36 +374,47 @@ useEffect(() => {
           </div>
         </aside>
 
-        {/* <!-- ========== MAIN CONTENT ========== --> */}
-        <main className="flex-1 px-4 sm:px-6 md:px-8 lg:px-12 py-6 md:py-8 lg:py-12">
+        {/* MAIN CONTENT */}
+        <main 
+          ref={mainContentRef}
+          className="flex-1 px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-6 md:py-8 lg:py-12"
+        >
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
                 
-            {/* <!-- ===== SONGS LIST ===== --> */}
+            {/* SONGS LIST */}
             <div className="lg:col-span-2">
-              {/* <!-- Artist Header --> */}
-              <div className="mb-6">
-                <h2 className="font-serif text-2xl font-semibold text-archive-dark">
+              {/* Mobile-friendly Artist Header */}
+              <div className="mb-4 sm:mb-6">
+                <h2 className="font-serif text-xl sm:text-2xl font-semibold text-archive-dark">
                   {selectedArtist?.name || 'Select an Artist'}
                 </h2>
-                <p className="text-archive-gold text-sm mt-1">
+                <p className="text-archive-gold text-xs sm:text-sm mt-1">
                   {selectedArtist ? `${getArtistRecordingCount(selectedArtist)} recordings across ${selectedArtist.albums.length} album${selectedArtist.albums.length > 1 ? 's' : ''}` : ''}
                 </p>
                 <div className="w-12 h-0.5 bg-archive-gold/50 mt-2"></div>
               </div>
 
-              {/* <!-- Song List --> */}
-              <div className="space-y-4 max-h-[calc(100vh-250px)] overflow-y-auto pr-2">
+              {/* Song List - with bottom padding for mobile scrolling */}
+              <div className="space-y-4 max-h-[calc(100vh-250px)] overflow-y-auto pr-2 pb-20 lg:pb-0">
                 {selectedArtist ? (
                   selectedArtist.albums.map((album: Album) => {
                     const isExpanded = expandedAlbums.has(album.id);
                     const albumTrackCount = album.tracks.length;
                     
                     return (
-                      <div key={album.id} className="border border-archive-gold/20 rounded-lg overflow-hidden">
-                        {/* <!-- Album Header - Clickable to expand/collapse --> */}
+                      <div key={album.id} className={`rounded-lg overflow-hidden ${
+                        isExpanded 
+                          ? 'border-2 border-archive-gold shadow-md' 
+                          : 'border border-archive-gold/20'
+                      }`}>
+                        {/* Album Header */}
                         <button
                           onClick={() => toggleAlbum(album.id)}
-                          className="w-full flex items-center justify-between p-3 bg-archive-gold/5 hover:bg-archive-gold/10 transition-all duration-300"
+                          className={`w-full flex items-center justify-between p-3 ${
+                            isExpanded 
+                              ? 'bg-archive-gold/10' 
+                              : 'bg-archive-gold/5'
+                          } hover:bg-archive-gold/10 transition-all duration-300`}
                         >
                           <div className="flex items-center gap-3 min-w-0 flex-1">
                             <div className="flex-shrink-0">
@@ -438,7 +455,7 @@ useEffect(() => {
                           </div>
                         </button>
 
-                        {/* <!-- Songs - Only show when expanded --> */}
+                        {/* Songs */}
                         {isExpanded && (
                           <div className="space-y-2 p-3 pt-2">
                             {album.tracks.map((track: Track) => {
@@ -457,14 +474,14 @@ useEffect(() => {
                                   onClick={() => handleTrackClick(trackWithAlbum)}
                                   className={`w-full group flex items-center justify-between p-2 sm:p-3 rounded-lg transition-all duration-300 ${
                                     isTrackPlaying
-                                      ? 'bg-archive-gold/30 text-archive-dark border-2 border-archive-gold shadow-lg'
+                                      ? 'bg-zinc-900/90 text-white border-2 border-archive-gold shadow-lg'
                                       : 'bg-archive-gold/5 border-2 border-archive-gold/20 hover:border-archive-gold/50 hover:shadow-md hover:bg-archive-gold/10'
                                   }`}
                                 >
                                   <div className="flex items-center gap-3 sm:gap-4 min-w-0">
                                     <div className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 ${
                                       isTrackPlaying
-                                        ? 'bg-archive-dark text-archive-gold'
+                                        ? 'bg-archive-gold text-archive-dark'
                                         : 'bg-archive-gold/10 group-hover:bg-archive-gold'
                                     } transition-all`}>
                                       {isTrackPlaying ? (
@@ -478,13 +495,21 @@ useEffect(() => {
                                       )}
                                     </div>
                                     <div className="text-left min-w-0">
-                                      <h3 className="font-serif font-semibold text-sm truncate text-archive-dark">{track.title}</h3>
+                                      <h3 className={`font-serif font-semibold text-sm truncate ${
+                                        isTrackPlaying ? 'text-white' : 'text-archive-dark'
+                                      }`}>
+                                        {track.title}
+                                      </h3>
                                       {isTrackPlaying && (
-                                        <p className="text-xs text-archive-dark/60 mt-0.5 animate-pulse">Now Playing</p>
+                                        <p className="text-xs text-archive-gold/80 mt-0.5 animate-pulse">▶ Now Playing</p>
                                       )}
                                     </div>
                                     {track.rare && (
-                                      <span className="text-xs bg-white text-red-800 px-2 py-0.5 rounded flex-shrink-0">Rare</span>
+                                      <span className={`text-xs px-2 py-0.5 rounded flex-shrink-0 ${
+                                        isTrackPlaying ? 'bg-white/20 text-archive-paper' : 'bg-white text-red-800'
+                                      }`}>
+                                        Rare
+                                      </span>
                                     )}
                                   </div>
                                 </button>
@@ -501,14 +526,14 @@ useEffect(() => {
               </div>
             </div>
 
-            {/* <!-- ===== NOW PLAYING PANEL ===== --> */}
+            {/* NOW PLAYING PANEL */}
             <div className="lg:col-span-1">
               <div className="bg-archive-gold/10 rounded-lg p-4 sm:p-5 border-2 border-archive-gold/30 shadow-xl sticky top-8 max-h-[calc(100vh-100px)] overflow-y-auto">
                 <h3 className="font-serif text-lg font-semibold text-archive-dark mb-4">Now Playing</h3>
                 
                 {selectedTrack ? (
                   <>
-                    {/* <!-- Album Art --> */}
+                    {/* Album Art */}
                     <div className="aspect-square bg-gradient-to-br from-archive-brown/10 to-archive-gold/10 rounded-lg mb-4 flex items-center justify-center border-2 border-archive-gold/20">
                       {selectedTrack.albumCover ? (
                         <img 
@@ -531,14 +556,14 @@ useEffect(() => {
                       </div>
                     </div>
 
-                    {/* <!-- Song Info --> */}
+                    {/* Song Info */}
                     <div className="text-center mb-4">
                       <h4 className="font-serif text-xl font-bold text-archive-dark">{selectedTrack.title}</h4>
                       <p className="text-archive-gold text-sm mt-1">{selectedTrack.artist}</p>
                       <p className="text-archive-brown/50 text-xs mt-1">{selectedTrack.albumTitle}</p>
                     </div>
 
-                    {/* <!-- Progress Bar --> */}
+                    {/* Progress Bar */}
                     <div className="space-y-2 mb-4">
                       <div 
                         className="h-1 bg-archive-brown/10 rounded-full overflow-hidden cursor-pointer relative"
@@ -555,7 +580,7 @@ useEffect(() => {
                       </div>
                     </div>
 
-                    {/* <!-- Controls --> */}
+                    {/* Controls */}
                     <div className="flex justify-center items-center gap-4 sm:gap-6 mb-4">
                       <button 
                         onClick={() => skip(-10)}
@@ -591,7 +616,7 @@ useEffect(() => {
                       </button>
                     </div>
 
-                    {/* <!-- About Section --> */}
+                    {/* About Section */}
                     <div className="mt-6 pt-4 border-t border-archive-gold/20">
                       <div className="flex items-center gap-2 mb-3">
                         <svg className="w-4 h-4 text-archive-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -609,7 +634,7 @@ useEffect(() => {
                       </div>
                     </div>
 
-                    {/* <!-- Close Button --> */}
+                    {/* Close Button */}
                     <button 
                       onClick={() => {
                         setSelectedTrack(null);
@@ -641,7 +666,7 @@ useEffect(() => {
         </main>
       </div>
 
-      {/* <!-- Mobile Bottom Player (visible on small screens) --> */}
+      {/* Mobile Bottom Player */}
       {selectedTrack && (
         <div className="lg:hidden fixed bottom-0 left-0 right-0 p-3 shadow-lg z-40 backdrop-blur-md bg-white/80 border-t border-archive-gold/20">
           <div className="flex items-center gap-3">
@@ -682,7 +707,6 @@ useEffect(() => {
               </button>
             </div>
           </div>
-          {/* <!-- Mini progress bar --> */}
           <div 
             className="w-full h-1 bg-archive-brown/20 rounded-full mt-2 overflow-hidden cursor-pointer"
             onClick={handleProgressClick}
