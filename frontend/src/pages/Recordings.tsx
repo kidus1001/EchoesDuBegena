@@ -168,14 +168,22 @@ useEffect(() => {
     };
   }, [selectedTrack]);
 
-  // Load new track
+  // Load new track - FIXED
   useEffect(() => {
-    if (selectedTrack && audioRef.current) {
-      const audio = audioRef.current;
-      audio.src = selectedTrack.audioUrl;
-      
-      if (isPlaying) {
-        audio.play().catch(error => {
+    const audio = audioRef.current;
+    if (!audio || !selectedTrack) return;
+
+    // Reset and load new track
+    audio.pause();
+    audio.currentTime = 0;
+    audio.src = selectedTrack.audioUrl;
+    audio.load();
+
+    // Auto-play if should be playing
+    if (isPlaying) {
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
           console.error('Error playing audio:', error);
           setIsPlaying(false);
         });
@@ -189,10 +197,13 @@ useEffect(() => {
     if (!audio || !selectedTrack) return;
 
     if (isPlaying) {
-      audio.play().catch(error => {
-        console.error('Error playing audio:', error);
-        setIsPlaying(false);
-      });
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.error('Error playing audio:', error);
+          setIsPlaying(false);
+        });
+      }
     } else {
       audio.pause();
     }
@@ -211,15 +222,34 @@ useEffect(() => {
   // Get selected artist
   const selectedArtist: Artist | undefined = artists.find(artist => artist.id === selectedArtistId);
 
-  // Handle track selection
+  // Handle track selection - FIXED
   const handleTrackClick = (track: TrackWithAlbum): void => {
+    // If same track, just toggle play/pause
     if (selectedTrack?.id === track.id) {
       setIsPlaying(!isPlaying);
-    } else {
-      setSelectedTrack(track);
-      setCurrentTime(0);
-      setIsPlaying(true);
+      return;
     }
+
+    // Stop current audio completely
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+      audioRef.current.src = '';
+      audioRef.current.load();
+    }
+
+    // Reset states
+    setCurrentTime(0);
+    setDuration(0);
+    setIsPlaying(false);
+    
+    // Set new track
+    setSelectedTrack(track);
+    
+    // Start playing after state updates
+    setTimeout(() => {
+      setIsPlaying(true);
+    }, 100);
   };
 
   // Toggle album expansion - only one at a time

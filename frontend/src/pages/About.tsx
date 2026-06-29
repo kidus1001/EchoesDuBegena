@@ -10,7 +10,7 @@ export const About = () => {
           <span className="text-archive-gold text-sm tracking-wider uppercase">Welcome to</span>
         </div>
         <h1 className="font-serif text-2xl md:text-4xl lg:text-5xl font-bold mb-6">
-          Begena Archive
+          Echoes of the Begena
         </h1>
       </div>
       <div className="w-48 h-0.5 bg-archive-gold/30 mx-auto"></div>
