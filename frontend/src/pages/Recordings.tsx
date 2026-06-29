@@ -474,7 +474,7 @@ const Recordings: React.FC = () => {
                                   onClick={() => handleTrackClick(trackWithAlbum)}
                                   className={`w-full group flex items-center justify-between p-2 sm:p-3 rounded-lg transition-all duration-300 ${
                                     isTrackPlaying
-                                      ? 'bg-zinc-900/90 text-white border-2 border-archive-gold shadow-lg'
+                                      ? 'bg-archive-gold/20 text-white border-2 border-archive-gold shadow-lg'
                                       : 'bg-archive-gold/5 border-2 border-archive-gold/20 hover:border-archive-gold/50 hover:shadow-md hover:bg-archive-gold/10'
                                   }`}
                                 >
@@ -496,7 +496,7 @@ const Recordings: React.FC = () => {
                                     </div>
                                     <div className="text-left min-w-0">
                                       <h3 className={`font-serif font-semibold text-sm truncate ${
-                                        isTrackPlaying ? 'text-white' : 'text-archive-dark'
+                                        isTrackPlaying ? 'text-archive-gold' : 'text-archive-dark'
                                       }`}>
                                         {track.title}
                                       </h3>
