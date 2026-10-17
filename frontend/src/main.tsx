@@ -6,7 +6,7 @@ import App from './App.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter basename="/Begena">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
